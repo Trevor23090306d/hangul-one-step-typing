@@ -1,0 +1,12 @@
+{
+  "kind": "hangul-content-index",
+  "version": 1,
+  "packs": [
+    {
+      "url": "daily.json",
+      "packId": "daily-lessons",
+      "revision": 2,
+      "sha256": "80c5672017b3c9a2ac3e1ad20dfdbca31d7f0f82a34abef2c1e90f091e4057cd"
+    }
+  ]
+}
