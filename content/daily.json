@@ -1,0 +1,551 @@
+{
+  "kind": "hangul-content-pack",
+  "schemaVersion": 1,
+  "packId": "daily-lessons",
+  "revision": 2,
+  "title": "每日十詞與配套例句",
+  "publishedAt": "2026-11-13T15:33:55.995Z",
+  "items": [
+    {
+      "id": "lesson:2026-11-11:words:일정",
+      "type": "words",
+      "text": "일정",
+      "meaning": "日程；安排",
+      "source": "原創日課 2026-11-11 / 2026-11-11-01",
+      "lessonDate": "2026-11-11",
+      "chapter": "2026-11-11 日課"
+    },
+    {
+      "id": "lesson:2026-11-11:sentences:내일 일정을 확인해요.",
+      "type": "sentences",
+      "text": "내일 일정을 확인해요.",
+      "meaning": "我核对明天的日程。",
+      "source": "原創日課 2026-11-11 / 2026-11-11-01",
+      "lessonDate": "2026-11-11",
+      "chapter": "2026-11-11 日課"
+    },
+    {
+      "id": "lesson:2026-11-11:words:회의",
+      "type": "words",
+      "text": "회의",
+      "meaning": "会议；商议",
+      "source": "原創日課 2026-11-11 / 2026-11-11-02",
+      "lessonDate": "2026-11-11",
+      "chapter": "2026-11-11 日課"
+    },
+    {
+      "id": "lesson:2026-11-11:sentences:회의는 오후 세 시에 있어요.",
+      "type": "sentences",
+      "text": "회의는 오후 세 시에 있어요.",
+      "meaning": "会议在下午三点举行。",
+      "source": "原創日課 2026-11-11 / 2026-11-11-02",
+      "lessonDate": "2026-11-11",
+      "chapter": "2026-11-11 日課"
+    },
+    {
+      "id": "lesson:2026-11-11:words:자료",
+      "type": "words",
+      "text": "자료",
+      "meaning": "资料；材料",
+      "source": "原創日課 2026-11-11 / 2026-11-11-03",
+      "lessonDate": "2026-11-11",
+      "chapter": "2026-11-11 日課"
+    },
+    {
+      "id": "lesson:2026-11-11:sentences:이 자료는 회의에 필요해요.",
+      "type": "sentences",
+      "text": "이 자료는 회의에 필요해요.",
+      "meaning": "这份资料是开会所需要的。",
+      "source": "原創日課 2026-11-11 / 2026-11-11-03",
+      "lessonDate": "2026-11-11",
+      "chapter": "2026-11-11 日課"
+    },
+    {
+      "id": "lesson:2026-11-11:words:준비하다",
+      "type": "words",
+      "text": "준비하다",
+      "meaning": "准备",
+      "source": "原創日課 2026-11-11 / 2026-11-11-04",
+      "lessonDate": "2026-11-11",
+      "chapter": "2026-11-11 日課"
+    },
+    {
+      "id": "lesson:2026-11-11:sentences:저는 회의 자료를 준비해요.",
+      "type": "sentences",
+      "text": "저는 회의 자료를 준비해요.",
+      "meaning": "我准备会议资料。",
+      "source": "原創日課 2026-11-11 / 2026-11-11-04",
+      "lessonDate": "2026-11-11",
+      "chapter": "2026-11-11 日課"
+    },
+    {
+      "id": "lesson:2026-11-11:words:확인하다",
+      "type": "words",
+      "text": "확인하다",
+      "meaning": "确认；核对",
+      "source": "原創日課 2026-11-11 / 2026-11-11-05",
+      "lessonDate": "2026-11-11",
+      "chapter": "2026-11-11 日課"
+    },
+    {
+      "id": "lesson:2026-11-11:sentences:수업 시간을 다시 확인해요.",
+      "type": "sentences",
+      "text": "수업 시간을 다시 확인해요.",
+      "meaning": "我再核对一下上课时间。",
+      "source": "原創日課 2026-11-11 / 2026-11-11-05",
+      "lessonDate": "2026-11-11",
+      "chapter": "2026-11-11 日課"
+    },
+    {
+      "id": "lesson:2026-11-11:words:연락하다",
+      "type": "words",
+      "text": "연락하다",
+      "meaning": "联系；通知",
+      "source": "原創日課 2026-11-11 / 2026-11-11-06",
+      "lessonDate": "2026-11-11",
+      "chapter": "2026-11-11 日課"
+    },
+    {
+      "id": "lesson:2026-11-11:sentences:친구에게 오늘 연락해요.",
+      "type": "sentences",
+      "text": "친구에게 오늘 연락해요.",
+      "meaning": "我今天联系朋友。",
+      "source": "原創日課 2026-11-11 / 2026-11-11-06",
+      "lessonDate": "2026-11-11",
+      "chapter": "2026-11-11 日課"
+    },
+    {
+      "id": "lesson:2026-11-11:words:필요하다",
+      "type": "words",
+      "text": "필요하다",
+      "meaning": "需要；有必要",
+      "source": "原創日課 2026-11-11 / 2026-11-11-07",
+      "lessonDate": "2026-11-11",
+      "chapter": "2026-11-11 日課"
+    },
+    {
+      "id": "lesson:2026-11-11:sentences:지금 시간이 필요해요.",
+      "type": "sentences",
+      "text": "지금 시간이 필요해요.",
+      "meaning": "我现在需要时间。",
+      "source": "原創日課 2026-11-11 / 2026-11-11-07",
+      "lessonDate": "2026-11-11",
+      "chapter": "2026-11-11 日課"
+    },
+    {
+      "id": "lesson:2026-11-11:words:수업",
+      "type": "words",
+      "text": "수업",
+      "meaning": "上课；课程",
+      "source": "原創日課 2026-11-11 / 2026-11-11-08",
+      "lessonDate": "2026-11-11",
+      "chapter": "2026-11-11 日課"
+    },
+    {
+      "id": "lesson:2026-11-11:sentences:오늘은 오전에 수업이 있어요.",
+      "type": "sentences",
+      "text": "오늘은 오전에 수업이 있어요.",
+      "meaning": "今天上午有课。",
+      "source": "原創日課 2026-11-11 / 2026-11-11-08",
+      "lessonDate": "2026-11-11",
+      "chapter": "2026-11-11 日課"
+    },
+    {
+      "id": "lesson:2026-11-11:words:시간",
+      "type": "words",
+      "text": "시간",
+      "meaning": "时间；小时",
+      "source": "原創日課 2026-11-11 / 2026-11-11-09",
+      "lessonDate": "2026-11-11",
+      "chapter": "2026-11-11 日課"
+    },
+    {
+      "id": "lesson:2026-11-11:sentences:오후에는 시간이 있어요.",
+      "type": "sentences",
+      "text": "오후에는 시간이 있어요.",
+      "meaning": "下午我有空。",
+      "source": "原創日課 2026-11-11 / 2026-11-11-09",
+      "lessonDate": "2026-11-11",
+      "chapter": "2026-11-11 日課"
+    },
+    {
+      "id": "lesson:2026-11-11:words:있다",
+      "type": "words",
+      "text": "있다",
+      "meaning": "有；在；存在",
+      "source": "原創日課 2026-11-11 / 2026-11-11-10",
+      "lessonDate": "2026-11-11",
+      "chapter": "2026-11-11 日課"
+    },
+    {
+      "id": "lesson:2026-11-11:sentences:자료는 책상 위에 있어요.",
+      "type": "sentences",
+      "text": "자료는 책상 위에 있어요.",
+      "meaning": "资料在书桌上。",
+      "source": "原創日課 2026-11-11 / 2026-11-11-10",
+      "lessonDate": "2026-11-11",
+      "chapter": "2026-11-11 日課"
+    },
+    {
+      "id": "lesson:2026-11-12:words:약속",
+      "type": "words",
+      "text": "약속",
+      "meaning": "约定；约见；承诺",
+      "source": "原創日課 2026-11-12 / 2026-11-12-01",
+      "lessonDate": "2026-11-12",
+      "chapter": "2026-11-12 日課"
+    },
+    {
+      "id": "lesson:2026-11-12:sentences:내일 오전에 약속이 있어요.",
+      "type": "sentences",
+      "text": "내일 오전에 약속이 있어요.",
+      "meaning": "我明天上午有约。",
+      "source": "原創日課 2026-11-12 / 2026-11-12-01",
+      "lessonDate": "2026-11-12",
+      "chapter": "2026-11-12 日課"
+    },
+    {
+      "id": "lesson:2026-11-12:words:변경하다",
+      "type": "words",
+      "text": "변경하다",
+      "meaning": "变更；更改",
+      "source": "原創日課 2026-11-12 / 2026-11-12-02",
+      "lessonDate": "2026-11-12",
+      "chapter": "2026-11-12 日課"
+    },
+    {
+      "id": "lesson:2026-11-12:sentences:약속 시간을 변경해요.",
+      "type": "sentences",
+      "text": "약속 시간을 변경해요.",
+      "meaning": "我更改约定的时间。",
+      "source": "原創日課 2026-11-12 / 2026-11-12-02",
+      "lessonDate": "2026-11-12",
+      "chapter": "2026-11-12 日課"
+    },
+    {
+      "id": "lesson:2026-11-12:words:가능하다",
+      "type": "words",
+      "text": "가능하다",
+      "meaning": "可行；有可能；可以实现",
+      "source": "原創日課 2026-11-12 / 2026-11-12-03",
+      "lessonDate": "2026-11-12",
+      "chapter": "2026-11-12 日課"
+    },
+    {
+      "id": "lesson:2026-11-12:sentences:내일 오전에 회의가 가능해요.",
+      "type": "sentences",
+      "text": "내일 오전에 회의가 가능해요.",
+      "meaning": "明天上午可以开会。",
+      "source": "原創日課 2026-11-12 / 2026-11-12-03",
+      "lessonDate": "2026-11-12",
+      "chapter": "2026-11-12 日課"
+    },
+    {
+      "id": "lesson:2026-11-12:words:기다리다",
+      "type": "words",
+      "text": "기다리다",
+      "meaning": "等；等待",
+      "source": "原創日課 2026-11-12 / 2026-11-12-04",
+      "lessonDate": "2026-11-12",
+      "chapter": "2026-11-12 日課"
+    },
+    {
+      "id": "lesson:2026-11-12:sentences:도서관에서 친구를 기다려요.",
+      "type": "sentences",
+      "text": "도서관에서 친구를 기다려요.",
+      "meaning": "我在图书馆等朋友。",
+      "source": "原創日課 2026-11-12 / 2026-11-12-04",
+      "lessonDate": "2026-11-12",
+      "chapter": "2026-11-12 日課"
+    },
+    {
+      "id": "lesson:2026-11-12:words:보내다",
+      "type": "words",
+      "text": "보내다",
+      "meaning": "发送；寄送；送",
+      "source": "原創日課 2026-11-12 / 2026-11-12-05",
+      "lessonDate": "2026-11-12",
+      "chapter": "2026-11-12 日課"
+    },
+    {
+      "id": "lesson:2026-11-12:sentences:친구에게 자료를 보내요.",
+      "type": "sentences",
+      "text": "친구에게 자료를 보내요.",
+      "meaning": "我把资料发给朋友。",
+      "source": "原創日課 2026-11-12 / 2026-11-12-05",
+      "lessonDate": "2026-11-12",
+      "chapter": "2026-11-12 日課"
+    },
+    {
+      "id": "lesson:2026-11-12:words:받다",
+      "type": "words",
+      "text": "받다",
+      "meaning": "接收；收到；领取",
+      "source": "原創日課 2026-11-12 / 2026-11-12-06",
+      "lessonDate": "2026-11-12",
+      "chapter": "2026-11-12 日課"
+    },
+    {
+      "id": "lesson:2026-11-12:sentences:자료를 받아요.",
+      "type": "sentences",
+      "text": "자료를 받아요.",
+      "meaning": "我接收资料。",
+      "source": "原創日課 2026-11-12 / 2026-11-12-06",
+      "lessonDate": "2026-11-12",
+      "chapter": "2026-11-12 日課"
+    },
+    {
+      "id": "lesson:2026-11-12:words:다시",
+      "type": "words",
+      "text": "다시",
+      "meaning": "再；再次；重新",
+      "source": "原創日課 2026-11-12 / 2026-11-12-07",
+      "lessonDate": "2026-11-12",
+      "chapter": "2026-11-12 日課"
+    },
+    {
+      "id": "lesson:2026-11-12:sentences:약속 시간을 다시 확인해요.",
+      "type": "sentences",
+      "text": "약속 시간을 다시 확인해요.",
+      "meaning": "我再核对一下约定的时间。",
+      "source": "原創日課 2026-11-12 / 2026-11-12-07",
+      "lessonDate": "2026-11-12",
+      "chapter": "2026-11-12 日課"
+    },
+    {
+      "id": "lesson:2026-11-12:words:내일",
+      "type": "words",
+      "text": "내일",
+      "meaning": "明天",
+      "source": "原創日課 2026-11-12 / 2026-11-12-08",
+      "lessonDate": "2026-11-12",
+      "chapter": "2026-11-12 日課"
+    },
+    {
+      "id": "lesson:2026-11-12:sentences:내일 오전에 자료를 보내요.",
+      "type": "sentences",
+      "text": "내일 오전에 자료를 보내요.",
+      "meaning": "我明天上午发送资料。",
+      "source": "原創日課 2026-11-12 / 2026-11-12-08",
+      "lessonDate": "2026-11-12",
+      "chapter": "2026-11-12 日課"
+    },
+    {
+      "id": "lesson:2026-11-12:words:오전",
+      "type": "words",
+      "text": "오전",
+      "meaning": "上午；午前",
+      "source": "原創日課 2026-11-12 / 2026-11-12-09",
+      "lessonDate": "2026-11-12",
+      "chapter": "2026-11-12 日課"
+    },
+    {
+      "id": "lesson:2026-11-12:sentences:오전 열 시에 약속이 있어요.",
+      "type": "sentences",
+      "text": "오전 열 시에 약속이 있어요.",
+      "meaning": "我上午十点有约。",
+      "source": "原創日課 2026-11-12 / 2026-11-12-09",
+      "lessonDate": "2026-11-12",
+      "chapter": "2026-11-12 日課"
+    },
+    {
+      "id": "lesson:2026-11-12:words:볼펜",
+      "type": "words",
+      "text": "볼펜",
+      "meaning": "圆珠笔",
+      "source": "原創日課 2026-11-12 / 2026-11-12-10",
+      "lessonDate": "2026-11-12",
+      "chapter": "2026-11-12 日課"
+    },
+    {
+      "id": "lesson:2026-11-12:sentences:책상 위에 볼펜이 있어요.",
+      "type": "sentences",
+      "text": "책상 위에 볼펜이 있어요.",
+      "meaning": "书桌上有圆珠笔。",
+      "source": "原創日課 2026-11-12 / 2026-11-12-10",
+      "lessonDate": "2026-11-12",
+      "chapter": "2026-11-12 日課"
+    },
+    {
+      "id": "lesson:2026-11-13:words:이메일",
+      "type": "words",
+      "text": "이메일",
+      "meaning": "电子邮件",
+      "source": "原創日課 2026-11-13 / 2026-11-13-01",
+      "lessonDate": "2026-11-13",
+      "chapter": "2026-11-13 日課"
+    },
+    {
+      "id": "lesson:2026-11-13:sentences:친구에게 이메일을 보내요.",
+      "type": "sentences",
+      "text": "친구에게 이메일을 보내요.",
+      "meaning": "我给朋友发送电子邮件。",
+      "source": "原創日課 2026-11-13 / 2026-11-13-01",
+      "lessonDate": "2026-11-13",
+      "chapter": "2026-11-13 日課"
+    },
+    {
+      "id": "lesson:2026-11-13:words:파일",
+      "type": "words",
+      "text": "파일",
+      "meaning": "文件；电脑档案",
+      "source": "原創日課 2026-11-13 / 2026-11-13-02",
+      "lessonDate": "2026-11-13",
+      "chapter": "2026-11-13 日課"
+    },
+    {
+      "id": "lesson:2026-11-13:sentences:파일을 받아요.",
+      "type": "sentences",
+      "text": "파일을 받아요.",
+      "meaning": "我接收文件。",
+      "source": "原創日課 2026-11-13 / 2026-11-13-02",
+      "lessonDate": "2026-11-13",
+      "chapter": "2026-11-13 日課"
+    },
+    {
+      "id": "lesson:2026-11-13:words:주소",
+      "type": "words",
+      "text": "주소",
+      "meaning": "地址",
+      "source": "原創日課 2026-11-13 / 2026-11-13-03",
+      "lessonDate": "2026-11-13",
+      "chapter": "2026-11-13 日課"
+    },
+    {
+      "id": "lesson:2026-11-13:sentences:이메일 주소를 확인해요.",
+      "type": "sentences",
+      "text": "이메일 주소를 확인해요.",
+      "meaning": "我核对邮箱地址。",
+      "source": "原創日課 2026-11-13 / 2026-11-13-03",
+      "lessonDate": "2026-11-13",
+      "chapter": "2026-11-13 日課"
+    },
+    {
+      "id": "lesson:2026-11-13:words:이름",
+      "type": "words",
+      "text": "이름",
+      "meaning": "名字；名称",
+      "source": "原創日課 2026-11-13 / 2026-11-13-04",
+      "lessonDate": "2026-11-13",
+      "chapter": "2026-11-13 日課"
+    },
+    {
+      "id": "lesson:2026-11-13:sentences:파일 이름을 확인해요.",
+      "type": "sentences",
+      "text": "파일 이름을 확인해요.",
+      "meaning": "我核对文件名。",
+      "source": "原創日課 2026-11-13 / 2026-11-13-04",
+      "lessonDate": "2026-11-13",
+      "chapter": "2026-11-13 日課"
+    },
+    {
+      "id": "lesson:2026-11-13:words:내용",
+      "type": "words",
+      "text": "내용",
+      "meaning": "内容",
+      "source": "原創日課 2026-11-13 / 2026-11-13-05",
+      "lessonDate": "2026-11-13",
+      "chapter": "2026-11-13 日課"
+    },
+    {
+      "id": "lesson:2026-11-13:sentences:이메일 내용을 다시 확인해요.",
+      "type": "sentences",
+      "text": "이메일 내용을 다시 확인해요.",
+      "meaning": "我再核对一下邮件内容。",
+      "source": "原創日課 2026-11-13 / 2026-11-13-05",
+      "lessonDate": "2026-11-13",
+      "chapter": "2026-11-13 日課"
+    },
+    {
+      "id": "lesson:2026-11-13:words:찾다",
+      "type": "words",
+      "text": "찾다",
+      "meaning": "寻找；查找；找到",
+      "source": "原創日課 2026-11-13 / 2026-11-13-06",
+      "lessonDate": "2026-11-13",
+      "chapter": "2026-11-13 日課"
+    },
+    {
+      "id": "lesson:2026-11-13:sentences:도서관에서 자료를 찾아요.",
+      "type": "sentences",
+      "text": "도서관에서 자료를 찾아요.",
+      "meaning": "我在图书馆查找资料。",
+      "source": "原創日課 2026-11-13 / 2026-11-13-06",
+      "lessonDate": "2026-11-13",
+      "chapter": "2026-11-13 日課"
+    },
+    {
+      "id": "lesson:2026-11-13:words:열다",
+      "type": "words",
+      "text": "열다",
+      "meaning": "打开",
+      "source": "原創日課 2026-11-13 / 2026-11-13-07",
+      "lessonDate": "2026-11-13",
+      "chapter": "2026-11-13 日課"
+    },
+    {
+      "id": "lesson:2026-11-13:sentences:파일을 열어요.",
+      "type": "sentences",
+      "text": "파일을 열어요.",
+      "meaning": "我打开文件。",
+      "source": "原創日課 2026-11-13 / 2026-11-13-07",
+      "lessonDate": "2026-11-13",
+      "chapter": "2026-11-13 日課"
+    },
+    {
+      "id": "lesson:2026-11-13:words:기다리다",
+      "type": "words",
+      "text": "기다리다",
+      "meaning": "等；等待",
+      "source": "原創日課 2026-11-13 / 2026-11-13-08",
+      "lessonDate": "2026-11-13",
+      "chapter": "2026-11-13 日課"
+    },
+    {
+      "id": "lesson:2026-11-13:sentences:도서관에서 친구를 기다려요.",
+      "type": "sentences",
+      "text": "도서관에서 친구를 기다려요.",
+      "meaning": "我在图书馆等朋友。",
+      "source": "原創日課 2026-11-13 / 2026-11-13-08",
+      "lessonDate": "2026-11-13",
+      "chapter": "2026-11-13 日課"
+    },
+    {
+      "id": "lesson:2026-11-13:words:받다",
+      "type": "words",
+      "text": "받다",
+      "meaning": "接收；收到；领取",
+      "source": "原創日課 2026-11-13 / 2026-11-13-09",
+      "lessonDate": "2026-11-13",
+      "chapter": "2026-11-13 日課"
+    },
+    {
+      "id": "lesson:2026-11-13:sentences:이메일을 받아요.",
+      "type": "sentences",
+      "text": "이메일을 받아요.",
+      "meaning": "我接收电子邮件。",
+      "source": "原創日課 2026-11-13 / 2026-11-13-09",
+      "lessonDate": "2026-11-13",
+      "chapter": "2026-11-13 日課"
+    },
+    {
+      "id": "lesson:2026-11-13:words:보내다",
+      "type": "words",
+      "text": "보내다",
+      "meaning": "发送；寄送",
+      "source": "原創日課 2026-11-13 / 2026-11-13-10",
+      "lessonDate": "2026-11-13",
+      "chapter": "2026-11-13 日課"
+    },
+    {
+      "id": "lesson:2026-11-13:sentences:친구에게 파일을 보내요.",
+      "type": "sentences",
+      "text": "친구에게 파일을 보내요.",
+      "meaning": "我把文件发给朋友。",
+      "source": "原創日課 2026-11-13 / 2026-11-13-10",
+      "lessonDate": "2026-11-13",
+      "chapter": "2026-11-13 日課"
+    }
+  ],
+  "sourceHash": "1d9abc7eebdf518851c111b0a8fb11b686e7d950f34856b496859d71175e8ad8"
+}
