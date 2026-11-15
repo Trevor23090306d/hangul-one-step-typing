@@ -26,6 +26,239 @@
 @media(max-width:680px){.shell{display:block}.sidebar{position:static;height:auto;padding:15px 18px 0;border-right:0;border-bottom:1px solid var(--line);background:#fafaf4}.brand{margin:0 0 14px;padding:0}.brand-mark{width:33px;height:33px;border-radius:10px}.brand small{font-size:9px;letter-spacing:1px}.brand strong{font-size:16px}.nav{display:flex;gap:5px;justify-content:space-between}.nav button{padding:11px 9px;border-radius:9px 9px 0 0;gap:6px;font-size:11px}.nav .icon{width:16px;height:16px}.nav .number,.sidebar-foot{display:none}.main{padding:23px 17px 28px}.topline .tag{font-size:9px;padding:5px 9px}.page-heading h1{font-size:24px}.date-note{display:none}.hero{grid-template-columns:1fr 115px;min-height:255px;gap:0}.hero h2{font-size:22px}.hero p{font-size:12px}.hero-art{transform:scale(.72);margin-left:-20px}.practice-card{padding:20px;min-height:410px}.card-footer{gap:12px;flex-wrap:wrap}.button{padding:12px 15px;font-size:12px}.aside{grid-template-columns:1fr}.aside-card:last-child{display:none}.aside-card .glyph-grid{grid-template-columns:repeat(6,1fr)}.keyboard-panel{padding:16px 10px 13px}.key-row{gap:3px}.key{height:40px;border-radius:5px}.key .kr{font-size:15px}.key small{font-size:8px;left:3px;top:2px}.key.shift{font-size:8px}.key.space{height:20px}.keyboard-caption{font-size:9px}.groups-grid{grid-template-columns:1fr}.library-grid{grid-template-columns:1fr 1fr;gap:10px}.word-card{padding:16px;min-height:175px}.word-card h2{font-size:25px}.word-card.sentence h2{font-size:20px}.word-card .word-action{flex-wrap:wrap}.key-map-grid{grid-template-columns:repeat(6,1fr)}.target-glyph{font-size:90px}.target-word{font-size:34px}.target-zone{min-height:275px}.practice-actions{flex-wrap:wrap}.footer{font-size:9px}.metrics{gap:10px}.metric{padding:18px}.metric .value{font-size:25px}.result-values strong{font-size:23px}.result-hero{padding:20px 0}.source-note{padding:14px}.mobile-backup{display:flex!important;gap:16px;margin-top:20px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 
+/* Quiet, readable layout for the simplified practice and ranking pages. */
+:root{--muted:#68776c;--shadow:none}
+body{font-size:15px;line-height:1.6}
+button,input,select{line-height:1.4}
+button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #87a992;outline-offset:3px}
+.shell{grid-template-columns:210px minmax(0,1fr)}
+.sidebar{padding:30px 20px;background:#f9f9f2}
+.brand{margin-bottom:35px;padding:0 5px;gap:11px}
+.brand strong{font-size:18px;letter-spacing:0}
+.brand small{font-size:13px;letter-spacing:0}
+.nav{gap:6px}
+.nav button{min-height:46px;padding:11px 13px;font-size:15px;gap:11px;color:#65746a}
+.nav .number{font-size:13px}
+.sidebar-foot{padding:20px 5px 0}
+.storage,.text-btn,.side-note{font-size:13px;line-height:1.7}
+.backup-actions{flex-wrap:wrap;gap:10px 14px}
+.main{max-width:1260px;padding:38px 42px 48px}
+.page-heading{margin:0 0 25px;align-items:center}
+.page-heading h1{font-size:30px;font-weight:600;letter-spacing:0;line-height:1.4}
+.subtitle{font-size:15px;margin-top:8px;line-height:1.7}
+.panel{border-radius:15px;box-shadow:none}
+.workspace{gap:22px}
+.button{min-height:44px;font-size:15px;padding:11px 18px;border-radius:9px;font-weight:550}
+.button.small{min-height:40px;font-size:14px;padding:8px 13px}
+.button.ghost{color:var(--muted)}
+select{min-height:40px;font-size:14px;padding:8px 10px}
+.input-choice{gap:12px;margin:0 0 22px;font-size:14px}
+.input-choice small{font-size:13px;color:var(--muted)}
+.input-choice .segmented button{font-size:14px;min-height:38px;padding:8px 13px}
+.segmented{border-radius:10px;background:#eef1e8}
+.segmented button{font-size:14px;min-height:40px;padding:8px 15px}
+.segmented button.selected{box-shadow:none}
+.start-panel{padding:28px;min-height:0}
+.start-panel h2{font-size:24px;font-weight:550;line-height:1.5;margin:0 0 12px}
+.start-panel p{margin:10px 0;font-size:15px;line-height:1.7}
+.start-summary{display:flex;align-items:center;flex-wrap:wrap;gap:10px 22px;color:var(--muted);font-size:15px;margin:0 0 24px}
+.start-summary p{margin:0}
+.start-summary strong{color:var(--ink);font-weight:550}
+.start-panel .card-footer{margin-top:24px;padding-top:20px;gap:16px}
+.duration{font-size:14px;gap:10px}
+.subtle{color:var(--muted);font-size:14px;line-height:1.7}
+.rank-card{padding:23px 25px;background:var(--paper);border:1px solid var(--line);border-radius:14px;text-align:left}
+.rank-card h2,.rank-card h3{font-size:18px;font-weight:550;line-height:1.5;margin:0 0 15px}
+.rank-card p{font-size:14px;line-height:1.7;margin:10px 0;color:var(--muted)}
+.rank-list{list-style:none;margin:0;padding:0}
+.rank-list li{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:18px;min-height:54px;padding:8px 2px;border-top:1px solid var(--line)}
+.rank-list li:first-child{border-top:0}
+.rank-list .kr{font-size:30px;line-height:1.2;color:#355741;font-weight:400}
+.rank-list strong{font-size:18px;font-weight:550;font-variant-numeric:tabular-nums;text-align:right;color:var(--ink)}
+.rank-list small{font-size:13px;color:var(--muted)}
+.record-tools{display:flex;align-items:center;flex-wrap:wrap;gap:10px 16px;margin:20px 0}
+.record-tools .subtle{margin:0}
+.compact-details{font-size:14px;line-height:1.7;margin-top:24px;padding-top:18px;border-top:1px solid var(--line)}
+.compact-details summary{cursor:pointer;width:fit-content;color:var(--green);font-size:14px;padding:4px 0}
+.compact-details[open] summary{margin-bottom:14px}
+.compact-details p{font-size:14px;line-height:1.8;color:var(--muted)}
+.compact-details .record-tools{margin-bottom:0}
+.section-box{padding:26px}
+.section-box h2{font-size:20px;font-weight:550}
+.section-label,.aside-card p,.card-top,.pill,.timer{font-size:13px;letter-spacing:0}
+.aside-card h3{font-size:16px}
+.question-label{font-size:14px;letter-spacing:0;margin-bottom:12px}
+.meaning{font-size:15px;color:var(--muted);margin:8px 0;line-height:1.7}
+.mapping{font-size:15px;gap:10px}
+.mapping kbd{font-size:14px}
+.feedback{height:auto;min-height:24px;font-size:14px;line-height:1.6;margin-top:12px}
+.practice-card{padding:25px 28px;min-height:440px}
+.practice-actions{gap:14px;padding-top:18px}
+.action-left{gap:9px}
+.native-label{font-size:14px;margin:14px 0 8px}
+.native-answer{font-size:30px;min-height:58px;border-color:#a6bea5;background:#fbfcf7;line-height:1.4}
+.native-answer:focus{outline:3px solid #87a992;outline-offset:3px;background:#fffefa}
+.composition-note{font-size:13px;line-height:1.7;color:var(--muted);max-width:620px}
+.pause-layer p{font-size:15px;line-height:1.7}
+.pause-layer h2{font-size:25px}
+.keyboard-heading,.keyboard-caption,.kbd-tip{font-size:13px;letter-spacing:0}
+.key small{font-size:11px;color:#73806d}
+.key.shift,.key.space{font-size:11px;color:#73806d}
+.groups-grid{gap:18px}
+.group-card{padding:24px}
+.group-card h2{font-size:20px;font-weight:550}
+.group-card p{font-size:15px;line-height:1.7}
+.group-glyphs{font-size:32px;gap:15px;margin:20px 0}
+.source-pill,.source-detail,.source-note,.notice{font-size:13px;line-height:1.7}
+.library-heading{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px 20px;margin-bottom:20px}
+.library-heading h2{font-size:20px;font-weight:550;margin:0}
+.library-heading p{font-size:14px;color:var(--muted);margin:0}
+.library-toolbar{margin-bottom:22px}
+.library-grid{gap:16px}
+.word-card{padding:22px;min-height:175px;gap:10px}
+.word-card h2{font-size:30px;line-height:1.4}
+.word-card.sentence h2{font-size:25px;line-height:1.6}
+.word-card p,.word-card .needed{font-size:14px;line-height:1.7}
+.word-card .word-action{font-size:13px;gap:12px;padding-top:10px}
+.library-pager{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:12px 20px;margin-top:25px;font-size:14px;color:var(--muted)}
+.library-pager .button{min-width:88px}
+.result-hero{padding:28px;max-width:880px;text-align:left}
+.result-hero h2{font-size:26px;line-height:1.5;margin:0 0 10px}
+.result-hero>p{font-size:15px;line-height:1.7;margin:10px 0 22px}
+.result-hero>.rank-card{margin:22px 0}
+.result-actions{justify-content:flex-start;gap:12px}
+.metrics{gap:16px}
+.metric .label,.session-stats small,.stat-key small{font-size:13px}
+table{font-size:14px}
+th{font-size:13px;padding-bottom:12px;color:var(--muted)}
+td{padding:15px 12px;color:#536c59}
+.empty{font-size:15px;line-height:1.8;padding:28px 18px}
+.modal p,.toast{font-size:14px;line-height:1.7}
+.modal{border:1px solid var(--line);border-radius:15px;box-shadow:0 18px 50px #213c3418}
+.mix-options label{font-size:15px;padding:15px}
+.touch-keyboard-head,.touch-caption{font-size:13px;line-height:1.5}
+.touch-shift small{font-size:11px}
+.touch-key{min-height:48px}
+.touch-mode.practicing .feedback{height:auto;min-height:24px;font-size:14px;line-height:1.6}
+.touch-mode.practicing .meaning{font-size:14px}
+
+@media(max-width:1180px){
+  .shell{grid-template-columns:190px minmax(0,1fr)}
+  .sidebar{padding:28px 14px}
+  .main{padding:30px 28px 40px}
+  .workspace{grid-template-columns:minmax(0,1fr) 210px}
+}
+@media(max-width:980px){
+  .shell{grid-template-columns:180px minmax(0,1fr)}
+  .main{padding:28px 24px 36px}
+  .workspace{grid-template-columns:1fr}
+  .brand strong{font-size:17px}
+  .nav button{font-size:14px;padding:11px}
+  .page-heading{margin:0 0 22px}
+  .practice-card{min-height:420px}
+  .touch-mode.practicing .nav button{font-size:13px;min-height:43px;padding:9px 10px}
+  .touch-mode.practicing .subtitle,.touch-mode.practicing .question-label{font-size:13px}
+  .touch-mode.practicing .touch-caption{font-size:13px}
+}
+@media(max-width:680px){
+  .shell{display:block;min-height:100svh}
+  .sidebar{padding:8px 12px 0;background:#f9f9f2;border-right:0;border-bottom:1px solid var(--line)}
+  .brand{display:none}
+  .nav{display:flex;flex-wrap:nowrap;justify-content:space-between;gap:2px}
+  .nav button{justify-content:center;flex:1;gap:6px;min-height:46px;font-size:13px;padding:10px 6px;border-radius:8px 8px 0 0;white-space:nowrap}
+  .nav .icon{width:16px;height:16px}
+  .nav .number,.sidebar-foot{display:none}
+  .main{padding:24px 16px 32px}
+  .page-heading{margin:0 0 20px;gap:12px}
+  .page-heading h1{font-size:25px}
+  .subtitle{font-size:14px;margin-top:7px}
+  .button{font-size:14px;min-height:44px;padding:11px 15px}
+  .button.small{font-size:13px;min-height:40px}
+  .text-btn{font-size:13px}
+  .input-choice{margin-bottom:18px;gap:8px 12px;font-size:13px}
+  .input-choice .segmented button{font-size:13px;min-height:38px;padding:8px 10px}
+  .input-choice small{font-size:13px}
+  .input-choice select{font-size:16px}
+  .panel{border-radius:13px}
+  .start-panel,.section-box{padding:22px}
+  .start-panel h2{font-size:22px}
+  .start-panel p{font-size:14px}
+  .start-summary{font-size:14px;gap:8px 16px;margin-bottom:22px}
+  .start-panel .card-footer{margin-top:20px;gap:16px;align-items:center}
+  .start-panel .card-footer>.button{flex:1;min-width:120px}
+  .rank-card{padding:19px 20px}
+  .rank-card h2,.rank-card h3{font-size:18px;margin-bottom:12px}
+  .rank-list li{min-height:54px;padding:8px 0}
+  .rank-list .kr{font-size:30px}
+  .rank-list strong{font-size:17px}
+  .record-tools{gap:10px 14px;margin:20px 0}
+  .compact-details{margin-top:22px}
+  .practice-card{padding:20px;min-height:400px}
+  .target-zone{min-height:250px;padding:18px 0}
+  .target-glyph{font-size:84px}
+  .target-word{font-size:34px;line-height:1.5}
+  .question-label,.meaning,.feedback{font-size:14px}
+  .practice-actions{padding-top:16px;gap:12px}
+  .action-left{gap:8px}
+  .native-answer{font-size:27px;min-height:54px}
+  .native-label{font-size:13px}
+  .composition-note{font-size:13px}
+  .keyboard-heading,.keyboard-caption,.kbd-tip{font-size:13px}
+  .key small{font-size:10px}
+  .key.shift,.key.space{font-size:10px}
+  .groups-grid,.library-grid{grid-template-columns:1fr;gap:14px}
+  .group-card,.word-card{padding:21px}
+  .group-card h2{font-size:19px}
+  .group-card p{font-size:14px}
+  .word-card{min-height:0}
+  .word-card h2{font-size:30px}
+  .word-card.sentence h2{font-size:25px}
+  .word-card .word-action{flex-wrap:wrap;gap:12px}
+  .library-heading{margin-bottom:17px;align-items:flex-start}
+  .library-heading h2{font-size:19px}
+  .library-pager{gap:12px;margin-top:22px}
+  .library-pager .button{min-width:82px}
+  .result-hero{padding:22px}
+  .result-hero h2{font-size:23px}
+  .result-hero>p{font-size:14px;margin-bottom:18px}
+  .result-hero>.rank-card{margin:20px 0}
+  .result-actions{gap:10px}
+  .result-actions>.button{flex:1;min-width:135px}
+  .mix-options label{font-size:14px}
+  .touch-mode.practicing .nav button,.native-mode.practicing .nav button{font-size:13px;min-height:42px;padding:8px 5px}
+  .touch-mode.practicing .touch-caption,.touch-keyboard-head{font-size:13px}
+  .native-mode.practicing .main{padding:10px 12px 18px}
+  .native-mode.practicing .page-heading,.native-mode.practicing .composition-note{display:none}
+  .native-mode.practicing .input-choice{margin:0 0 10px;gap:8px}
+  .native-mode.practicing .input-choice small{display:none}
+  .native-mode.practicing .input-choice .segmented button{min-height:36px;padding:7px 10px;font-size:13px}
+  .native-mode.practicing .practice-card{padding:13px 15px;min-height:0}
+  .native-mode.practicing .card-top,.native-mode.practicing .pill,.native-mode.practicing .timer{font-size:13px}
+  .native-mode.practicing .target-zone{min-height:0;padding:10px 0 8px}
+  .native-mode.practicing .question-label{font-size:13px;line-height:1.4;margin:0 0 5px}
+  .native-mode.practicing .target-glyph{font-size:54px;line-height:1.2;letter-spacing:2px}
+  .native-mode.practicing .target-word{font-size:28px;line-height:1.35;margin-bottom:2px}
+  .native-mode.practicing .meaning{font-size:13px;line-height:1.4;margin:3px 0}
+  .native-mode.practicing .native-label{font-size:13px;line-height:1.4;margin:8px 0 6px}
+  .native-mode.practicing .native-answer{min-height:48px;font-size:25px;line-height:1.3;padding:7px 10px}
+  .native-mode.practicing .mapping{font-size:13px;line-height:1.4;margin-top:6px;padding:5px 9px}
+  .native-mode.practicing .mapping kbd{font-size:13px;padding:3px 7px}
+  .native-mode.practicing .feedback{font-size:13px;line-height:1.4;min-height:19px;margin:6px 0 0}
+  .native-mode.practicing .practice-actions{padding-top:10px;gap:8px;flex-wrap:nowrap}
+  .native-mode.practicing .practice-actions .button{font-size:13px;min-height:38px;padding:8px 10px}
+  .native-mode.practicing .practice-actions>.text-btn{font-size:13px;line-height:1.4;text-align:right}
+  .native-mode.practicing .action-left{gap:7px;flex-shrink:0}
+  .native-mode.practicing .workspace{gap:12px}
+}
+@media(max-width:380px){
+  .main{padding-left:13px;padding-right:13px}
+  .nav button,.touch-mode.practicing .nav button,.native-mode.practicing .nav button{font-size:13px;gap:4px;padding-left:4px;padding-right:4px}
+  .nav .icon{width:14px;height:14px}
+  .start-panel,.section-box,.result-hero{padding:19px}
+  .rank-card{padding:17px}
+  .native-mode.practicing .practice-card{padding-left:12px;padding-right:12px}
+}
+
 </style>
 </head>
 <body>
@@ -241,7 +474,7 @@
     });
     return {kind:raw.kind,schemaVersion:1,packId:raw.packId,revision:raw.revision,title:raw.title,publishedAt:str(raw.publishedAt,50)?raw.publishedAt:'',items};
   }
-  function state(){return {version:2,deviceId:id(),introduced:[],guides:[],sessions:[],packs:[],legacy:null,settings:{minutes:3},updatedAt:null};}
+  function state(){return {version:3,deviceId:id(),introduced:[],guides:[],sessions:[],packs:[],legacy:null,settings:{minutes:3},updatedAt:null};}
   function session(x,groups){
     if(!obj(x)||!str(x.id,150)||!x.id||!str(x.at,50)||!Number.isFinite(Date.parse(x.at))||!['physical','native'].includes(x.inputMode)||!['guide','keys','mixed','words','sentences'].includes(x.mode)||!(x.groupId===null||groups.some(g=>g.id===x.groupId))||!num(x.elapsed,86400000)||!num(x.questions,1e6)||!Array.isArray(x.events)||x.events.length>20000)fail();
     const events=x.events.map(e=>{
@@ -250,12 +483,22 @@
       return {key:e.key,itemKey:e.itemKey||'',clean:e.clean,hinted:e.hinted,errors:e.errors,ms:e.ms};
     });
     if(x.mode==='keys'&&(!x.groupId||events.some(e=>!groups.find(g=>g.id===x.groupId).keys.includes(e.key))))fail();
-    return {id:x.id,at:x.at,inputMode:x.inputMode,mode:x.mode,groupId:x.groupId,elapsed:x.elapsed,questions:x.questions,events};
+    let mistakes=null;
+    if(x.mistakes!==undefined&&x.mistakes!==null){
+      if(!Array.isArray(x.mistakes)||x.mistakes.length>50000)fail();
+      mistakes=x.mistakes.map(m=>{
+        if(!obj(m)||!str(m.id,150)||!m.id||!str(m.at,50)||!Number.isFinite(Date.parse(m.at))||!Number.isSafeInteger(m.question)||m.question<1||m.question>1e6||!C.isLetter(m.key)||!(m.actual===null||C.isLetter(m.actual)))fail();
+        return {id:m.id,at:m.at,question:m.question,key:m.key,actual:m.actual};
+      });
+      if(new Set(mistakes.map(m=>m.id)).size!==mistakes.length)fail();
+    }
+    return {id:x.id,at:x.at,inputMode:x.inputMode,mode:x.mode,groupId:x.groupId,elapsed:x.elapsed,questions:x.questions,events,mistakes};
   }
   function validate(raw,groups){
-    if(!obj(raw)||raw.version!==2||!str(raw.deviceId,150)||!Array.isArray(raw.introduced)||raw.introduced.length>33||!raw.introduced.every(C.isLetter)||!Array.isArray(raw.guides)||!raw.guides.every(g=>groups.some(v=>v.id===g))||!Array.isArray(raw.sessions)||raw.sessions.length>10000||!Array.isArray(raw.packs)||raw.packs.length>1000||!obj(raw.settings)||![3,5].includes(raw.settings.minutes))fail();
+    if(!obj(raw)||![2,3].includes(raw.version)||!str(raw.deviceId,150)||!Array.isArray(raw.introduced)||raw.introduced.length>33||!raw.introduced.every(C.isLetter)||!Array.isArray(raw.guides)||!raw.guides.every(g=>groups.some(v=>v.id===g))||!Array.isArray(raw.sessions)||raw.sessions.length>10000||!Array.isArray(raw.packs)||raw.packs.length>1000||!obj(raw.settings)||![3,5].includes(raw.settings.minutes))fail();
     const out=state();out.deviceId=raw.deviceId;out.introduced=[...new Set(raw.introduced)];out.guides=[...new Set(raw.guides)];out.sessions=raw.sessions.map(x=>session(x,groups));out.packs=raw.packs.map(pack);out.settings.minutes=raw.settings.minutes;
     if(new Set(out.sessions.map(x=>x.id)).size!==out.sessions.length||new Set(out.packs.map(x=>x.packId)).size!==out.packs.length)fail();
+    const mistakeIds=out.sessions.flatMap(x=>(x.mistakes||[]).map(m=>m.id));if(new Set(mistakeIds).size!==mistakeIds.length)fail();
     out.legacy=raw.legacy?C.validateState(raw.legacy,groups):null;out.updatedAt=str(raw.updatedAt,50)?raw.updatedAt:null;
     return out;
   }
@@ -271,14 +514,15 @@
   function merge(left,right,groups){
     const a=validate(left,groups),b=validate(right,groups),map=new Map(a.sessions.map(x=>[x.id,x]));let added=0;
     for(const s of b.sessions){const old=map.get(s.id);if(!old){map.set(s.id,s);added++;continue;}
-      const short=old.events.length<=s.events.length?old:s,long=short===old?s:old;
-      if(old.inputMode!==s.inputMode||old.mode!==s.mode||old.groupId!==s.groupId||JSON.stringify(short.events)!==JSON.stringify(long.events.slice(0,short.events.length)))throw new Error('同一回合出現不同內容，未合併；原資料保留。');
-      map.set(s.id,{...long,elapsed:Math.max(old.elapsed,s.elapsed),questions:Math.max(old.questions,s.questions)});
+      const longer=(x,y)=>{const short=x.length<=y.length?x:y,long=short===x?y:x;if(JSON.stringify(short)!==JSON.stringify(long.slice(0,short.length)))throw new Error('同一回合出現不同內容，未合併；原資料保留。');return long;};
+      if(old.inputMode!==s.inputMode||old.mode!==s.mode||old.groupId!==s.groupId||old.at!==s.at)throw new Error('同一回合出現不同內容，未合併；原資料保留。');
+      const events=longer(old.events,s.events),mistakes=old.mistakes===null?s.mistakes:s.mistakes===null?old.mistakes:longer(old.mistakes,s.mistakes);
+      map.set(s.id,{...old,events,mistakes,elapsed:Math.max(old.elapsed,s.elapsed),questions:Math.max(old.questions,s.questions)});
     }
     a.sessions=[...map.values()].sort((x,y)=>x.at.localeCompare(y.at));a.introduced=[...new Set([...a.introduced,...b.introduced])];a.guides=[...new Set([...a.guides,...b.guides])];
     for(const p of b.packs)addPack(a,p);
     if(a.legacy&&b.legacy&&JSON.stringify(a.legacy)!==JSON.stringify(b.legacy))throw new Error('兩份舊版歷史基準不同，無法安全相加；請保留原檔並分別查看。');
-    a.legacy=a.legacy||b.legacy;return {state:a,added,duplicates:b.sessions.length-added};
+    a.legacy=a.legacy||b.legacy;return {state:validate(a,groups),added,duplicates:b.sessions.length-added};
   }
   function parse(text,groups){
     if(text.length>25*1024*1024)throw new Error('檔案超過25MB，原資料保留。');
@@ -286,9 +530,14 @@
     if(x.kind==='hangul-content-pack')return {kind:'pack',value:pack(x)};
     if(x.app!==C.APP_ID)fail();
     if(x.version===1)return {kind:'legacy',value:migrate(x.data,groups)};
-    if(x.version!==2)fail();return {kind:'backup',value:validate(x.data,groups)};
+    if(![2,3].includes(x.version))fail();return {kind:'backup',value:validate(x.data,groups)};
   }
-  const backup=s=>JSON.stringify({app:C.APP_ID,version:2,exportedAt:new Date().toISOString(),data:s},null,2);
+  const backup=s=>JSON.stringify({app:C.APP_ID,version:3,exportedAt:new Date().toISOString(),data:s},null,2);
+  function mistakeRanking(sessions,{inputMode,days=null,limit=33,now=Date.now()}={}){
+    const counts=new Map(),seen=new Set(),cutoff=days===null?null:now-days*86400000;
+    for(const r of sessions){if(r.mode==='guide'||(inputMode&&r.inputMode!==inputMode))continue;for(const m of r.mistakes||[]){if(seen.has(m.id)||(cutoff!==null&&Date.parse(m.at)<cutoff))continue;seen.add(m.id);counts.set(m.key,(counts.get(m.key)||0)+1);}}
+    const order=Object.keys(C.KEYMAP).filter(C.isLetter);return [...counts].map(([key,count])=>({key,count})).sort((a,b)=>b.count-a.count||order.indexOf(a.key)-order.indexOf(b.key)).slice(0,limit);
+  }
   function stats(s,inputMode){
     const keys={},items={},groups={};
     for(const r of s.sessions.filter(r=>r.inputMode===inputMode))for(const e of r.events){
@@ -304,35 +553,70 @@
     try{const a=C.encode(v),b=C.encode(t);if(a.every((k,i)=>k===b[i]))return 'partial';}catch{}
     return composing?'composing':'error';
   }
-  const api={id,normalize,itemKey,pack,state,validate,migrate,addPack,merge,parse,backup,stats,mixedKeys,textStatus};
+  const api={id,normalize,itemKey,pack,state,validate,migrate,addPack,merge,parse,backup,stats,mixedKeys,textStatus,mistakeRanking};
   if(typeof module!=='undefined'&&module.exports)module.exports=api;root.HangulData=api;
+})(typeof globalThis!=='undefined'?globalThis:this);
+
+(function(root){
+ 'use strict';
+ const C=typeof module!=='undefined'&&module.exports?require('./core.js'):root.HangulCore;
+ // Work in two-beolsik tokens, so 앙 → 아이 is a normal continuation, not a typo.
+ // These are observable text edits, not raw touch events from a system keyboard.
+ function nativeChanges(previous,value,target,{inputType='',single=false}={}){
+  if(previous===value||/^delete|^history|^insertFrom|^insertReplacement|^insertTranspose/i.test(inputType))return [];
+  let before,after,expected;try{before=C.encode(previous);after=C.encode(value);expected=C.encode(target);}catch{return [];}
+  if(after.length<before.length&&!/^insert/.test(inputType))return [];
+  let prefix=0,suffix=0;while(prefix<before.length&&prefix<after.length&&before[prefix]===after[prefix])prefix++;
+  while(suffix<before.length-prefix&&suffix<after.length-prefix&&before[before.length-1-suffix]===after[after.length-1-suffix])suffix++;
+  if(prefix===after.length-suffix)return [];
+  const out=[];
+  if(single){const key=expected[0];if(C.isLetter(key))for(const actual of after.slice(prefix,after.length-suffix))if(actual!==key)out.push({key,actual:C.isLetter(actual)?actual:null});return out;}
+  let common=0;while(common<after.length&&common<expected.length&&after[common]===expected[common])common++;
+  if(common===after.length)return [];
+  const actual=after.slice(common),want=expected.slice(common),n=actual.length,m=want.length;
+  const dp=Array.from({length:n+1},()=>new Uint16Array(m+1));for(let i=0;i<=n;i++)dp[i][0]=i;for(let j=0;j<=m;j++)dp[0][j]=j;
+  for(let i=1;i<=n;i++)for(let j=1;j<=m;j++)dp[i][j]=Math.min(dp[i-1][j]+1,dp[i][j-1]+1,dp[i-1][j-1]+(actual[i-1]===want[j-1]?0:1));
+  // The unanswered target suffix is free. Prefer the nearest prefix on a tie.
+  let end=0;for(let j=1;j<=m;j++)if(dp[n][j]<dp[n][end]||(dp[n][j]===dp[n][end]&&Math.abs(j-n)<Math.abs(end-n)))end=j;
+  const mapping=Array(after.length).fill(null);for(let k=0;k<common;k++)mapping[k]=k;
+  let i=n,j=end;while(i>0||j>0){
+   if(i&&j&&dp[i][j]===dp[i-1][j-1]+(actual[i-1]===want[j-1]?0:1)){mapping[common+i-1]=common+j-1;i--;j--;}
+   else if(i&&dp[i][j]===dp[i-1][j]+1){mapping[common+i-1]=j<m?common+j:null;i--;}
+   else j--;
+  }
+  for(let at=prefix;at<after.length-suffix;at++){const targetAt=mapping[at],key=targetAt===null?null:expected[targetAt],pressed=after[at];if(C.isLetter(key)&&key!==pressed)out.push({key,actual:C.isLetter(pressed)?pressed:null});}
+  return out;
+ }
+ const api={nativeChanges};if(typeof module!=='undefined'&&module.exports)module.exports=api;root.HangulMistakes=api;
 })(typeof globalThis!=='undefined'?globalThis:this);
 
 window.HangulDailyPack={"kind":"hangul-content-pack","schemaVersion":1,"packId":"daily-lessons","revision":2,"title":"每日十詞與配套例句","publishedAt":"2026-11-13T15:33:55.995Z","items":[{"id":"lesson:2026-11-11:words:일정","type":"words","text":"일정","meaning":"日程；安排","source":"原創日課 2026-11-11 / 2026-11-11-01","lessonDate":"2026-11-11","chapter":"2026-11-11 日課"},{"id":"lesson:2026-11-11:sentences:내일 일정을 확인해요.","type":"sentences","text":"내일 일정을 확인해요.","meaning":"我核对明天的日程。","source":"原創日課 2026-11-11 / 2026-11-11-01","lessonDate":"2026-11-11","chapter":"2026-11-11 日課"},{"id":"lesson:2026-11-11:words:회의","type":"words","text":"회의","meaning":"会议；商议","source":"原創日課 2026-11-11 / 2026-11-11-02","lessonDate":"2026-11-11","chapter":"2026-11-11 日課"},{"id":"lesson:2026-11-11:sentences:회의는 오후 세 시에 있어요.","type":"sentences","text":"회의는 오후 세 시에 있어요.","meaning":"会议在下午三点举行。","source":"原創日課 2026-11-11 / 2026-11-11-02","lessonDate":"2026-11-11","chapter":"2026-11-11 日課"},{"id":"lesson:2026-11-11:words:자료","type":"words","text":"자료","meaning":"资料；材料","source":"原創日課 2026-11-11 / 2026-11-11-03","lessonDate":"2026-11-11","chapter":"2026-11-11 日課"},{"id":"lesson:2026-11-11:sentences:이 자료는 회의에 필요해요.","type":"sentences","text":"이 자료는 회의에 필요해요.","meaning":"这份资料是开会所需要的。","source":"原創日課 2026-11-11 / 2026-11-11-03","lessonDate":"2026-11-11","chapter":"2026-11-11 日課"},{"id":"lesson:2026-11-11:words:준비하다","type":"words","text":"준비하다","meaning":"准备","source":"原創日課 2026-11-11 / 2026-11-11-04","lessonDate":"2026-11-11","chapter":"2026-11-11 日課"},{"id":"lesson:2026-11-11:sentences:저는 회의 자료를 준비해요.","type":"sentences","text":"저는 회의 자료를 준비해요.","meaning":"我准备会议资料。","source":"原創日課 2026-11-11 / 2026-11-11-04","lessonDate":"2026-11-11","chapter":"2026-11-11 日課"},{"id":"lesson:2026-11-11:words:확인하다","type":"words","text":"확인하다","meaning":"确认；核对","source":"原創日課 2026-11-11 / 2026-11-11-05","lessonDate":"2026-11-11","chapter":"2026-11-11 日課"},{"id":"lesson:2026-11-11:sentences:수업 시간을 다시 확인해요.","type":"sentences","text":"수업 시간을 다시 확인해요.","meaning":"我再核对一下上课时间。","source":"原創日課 2026-11-11 / 2026-11-11-05","lessonDate":"2026-11-11","chapter":"2026-11-11 日課"},{"id":"lesson:2026-11-11:words:연락하다","type":"words","text":"연락하다","meaning":"联系；通知","source":"原創日課 2026-11-11 / 2026-11-11-06","lessonDate":"2026-11-11","chapter":"2026-11-11 日課"},{"id":"lesson:2026-11-11:sentences:친구에게 오늘 연락해요.","type":"sentences","text":"친구에게 오늘 연락해요.","meaning":"我今天联系朋友。","source":"原創日課 2026-11-11 / 2026-11-11-06","lessonDate":"2026-11-11","chapter":"2026-11-11 日課"},{"id":"lesson:2026-11-11:words:필요하다","type":"words","text":"필요하다","meaning":"需要；有必要","source":"原創日課 2026-11-11 / 2026-11-11-07","lessonDate":"2026-11-11","chapter":"2026-11-11 日課"},{"id":"lesson:2026-11-11:sentences:지금 시간이 필요해요.","type":"sentences","text":"지금 시간이 필요해요.","meaning":"我现在需要时间。","source":"原創日課 2026-11-11 / 2026-11-11-07","lessonDate":"2026-11-11","chapter":"2026-11-11 日課"},{"id":"lesson:2026-11-11:words:수업","type":"words","text":"수업","meaning":"上课；课程","source":"原創日課 2026-11-11 / 2026-11-11-08","lessonDate":"2026-11-11","chapter":"2026-11-11 日課"},{"id":"lesson:2026-11-11:sentences:오늘은 오전에 수업이 있어요.","type":"sentences","text":"오늘은 오전에 수업이 있어요.","meaning":"今天上午有课。","source":"原創日課 2026-11-11 / 2026-11-11-08","lessonDate":"2026-11-11","chapter":"2026-11-11 日課"},{"id":"lesson:2026-11-11:words:시간","type":"words","text":"시간","meaning":"时间；小时","source":"原創日課 2026-11-11 / 2026-11-11-09","lessonDate":"2026-11-11","chapter":"2026-11-11 日課"},{"id":"lesson:2026-11-11:sentences:오후에는 시간이 있어요.","type":"sentences","text":"오후에는 시간이 있어요.","meaning":"下午我有空。","source":"原創日課 2026-11-11 / 2026-11-11-09","lessonDate":"2026-11-11","chapter":"2026-11-11 日課"},{"id":"lesson:2026-11-11:words:있다","type":"words","text":"있다","meaning":"有；在；存在","source":"原創日課 2026-11-11 / 2026-11-11-10","lessonDate":"2026-11-11","chapter":"2026-11-11 日課"},{"id":"lesson:2026-11-11:sentences:자료는 책상 위에 있어요.","type":"sentences","text":"자료는 책상 위에 있어요.","meaning":"资料在书桌上。","source":"原創日課 2026-11-11 / 2026-11-11-10","lessonDate":"2026-11-11","chapter":"2026-11-11 日課"},{"id":"lesson:2026-11-12:words:약속","type":"words","text":"약속","meaning":"约定；约见；承诺","source":"原創日課 2026-11-12 / 2026-11-12-01","lessonDate":"2026-11-12","chapter":"2026-11-12 日課"},{"id":"lesson:2026-11-12:sentences:내일 오전에 약속이 있어요.","type":"sentences","text":"내일 오전에 약속이 있어요.","meaning":"我明天上午有约。","source":"原創日課 2026-11-12 / 2026-11-12-01","lessonDate":"2026-11-12","chapter":"2026-11-12 日課"},{"id":"lesson:2026-11-12:words:변경하다","type":"words","text":"변경하다","meaning":"变更；更改","source":"原創日課 2026-11-12 / 2026-11-12-02","lessonDate":"2026-11-12","chapter":"2026-11-12 日課"},{"id":"lesson:2026-11-12:sentences:약속 시간을 변경해요.","type":"sentences","text":"약속 시간을 변경해요.","meaning":"我更改约定的时间。","source":"原創日課 2026-11-12 / 2026-11-12-02","lessonDate":"2026-11-12","chapter":"2026-11-12 日課"},{"id":"lesson:2026-11-12:words:가능하다","type":"words","text":"가능하다","meaning":"可行；有可能；可以实现","source":"原創日課 2026-11-12 / 2026-11-12-03","lessonDate":"2026-11-12","chapter":"2026-11-12 日課"},{"id":"lesson:2026-11-12:sentences:내일 오전에 회의가 가능해요.","type":"sentences","text":"내일 오전에 회의가 가능해요.","meaning":"明天上午可以开会。","source":"原創日課 2026-11-12 / 2026-11-12-03","lessonDate":"2026-11-12","chapter":"2026-11-12 日課"},{"id":"lesson:2026-11-12:words:기다리다","type":"words","text":"기다리다","meaning":"等；等待","source":"原創日課 2026-11-12 / 2026-11-12-04","lessonDate":"2026-11-12","chapter":"2026-11-12 日課"},{"id":"lesson:2026-11-12:sentences:도서관에서 친구를 기다려요.","type":"sentences","text":"도서관에서 친구를 기다려요.","meaning":"我在图书馆等朋友。","source":"原創日課 2026-11-12 / 2026-11-12-04","lessonDate":"2026-11-12","chapter":"2026-11-12 日課"},{"id":"lesson:2026-11-12:words:보내다","type":"words","text":"보내다","meaning":"发送；寄送；送","source":"原創日課 2026-11-12 / 2026-11-12-05","lessonDate":"2026-11-12","chapter":"2026-11-12 日課"},{"id":"lesson:2026-11-12:sentences:친구에게 자료를 보내요.","type":"sentences","text":"친구에게 자료를 보내요.","meaning":"我把资料发给朋友。","source":"原創日課 2026-11-12 / 2026-11-12-05","lessonDate":"2026-11-12","chapter":"2026-11-12 日課"},{"id":"lesson:2026-11-12:words:받다","type":"words","text":"받다","meaning":"接收；收到；领取","source":"原創日課 2026-11-12 / 2026-11-12-06","lessonDate":"2026-11-12","chapter":"2026-11-12 日課"},{"id":"lesson:2026-11-12:sentences:자료를 받아요.","type":"sentences","text":"자료를 받아요.","meaning":"我接收资料。","source":"原創日課 2026-11-12 / 2026-11-12-06","lessonDate":"2026-11-12","chapter":"2026-11-12 日課"},{"id":"lesson:2026-11-12:words:다시","type":"words","text":"다시","meaning":"再；再次；重新","source":"原創日課 2026-11-12 / 2026-11-12-07","lessonDate":"2026-11-12","chapter":"2026-11-12 日課"},{"id":"lesson:2026-11-12:sentences:약속 시간을 다시 확인해요.","type":"sentences","text":"약속 시간을 다시 확인해요.","meaning":"我再核对一下约定的时间。","source":"原創日課 2026-11-12 / 2026-11-12-07","lessonDate":"2026-11-12","chapter":"2026-11-12 日課"},{"id":"lesson:2026-11-12:words:내일","type":"words","text":"내일","meaning":"明天","source":"原創日課 2026-11-12 / 2026-11-12-08","lessonDate":"2026-11-12","chapter":"2026-11-12 日課"},{"id":"lesson:2026-11-12:sentences:내일 오전에 자료를 보내요.","type":"sentences","text":"내일 오전에 자료를 보내요.","meaning":"我明天上午发送资料。","source":"原創日課 2026-11-12 / 2026-11-12-08","lessonDate":"2026-11-12","chapter":"2026-11-12 日課"},{"id":"lesson:2026-11-12:words:오전","type":"words","text":"오전","meaning":"上午；午前","source":"原創日課 2026-11-12 / 2026-11-12-09","lessonDate":"2026-11-12","chapter":"2026-11-12 日課"},{"id":"lesson:2026-11-12:sentences:오전 열 시에 약속이 있어요.","type":"sentences","text":"오전 열 시에 약속이 있어요.","meaning":"我上午十点有约。","source":"原創日課 2026-11-12 / 2026-11-12-09","lessonDate":"2026-11-12","chapter":"2026-11-12 日課"},{"id":"lesson:2026-11-12:words:볼펜","type":"words","text":"볼펜","meaning":"圆珠笔","source":"原創日課 2026-11-12 / 2026-11-12-10","lessonDate":"2026-11-12","chapter":"2026-11-12 日課"},{"id":"lesson:2026-11-12:sentences:책상 위에 볼펜이 있어요.","type":"sentences","text":"책상 위에 볼펜이 있어요.","meaning":"书桌上有圆珠笔。","source":"原創日課 2026-11-12 / 2026-11-12-10","lessonDate":"2026-11-12","chapter":"2026-11-12 日課"},{"id":"lesson:2026-11-13:words:이메일","type":"words","text":"이메일","meaning":"电子邮件","source":"原創日課 2026-11-13 / 2026-11-13-01","lessonDate":"2026-11-13","chapter":"2026-11-13 日課"},{"id":"lesson:2026-11-13:sentences:친구에게 이메일을 보내요.","type":"sentences","text":"친구에게 이메일을 보내요.","meaning":"我给朋友发送电子邮件。","source":"原創日課 2026-11-13 / 2026-11-13-01","lessonDate":"2026-11-13","chapter":"2026-11-13 日課"},{"id":"lesson:2026-11-13:words:파일","type":"words","text":"파일","meaning":"文件；电脑档案","source":"原創日課 2026-11-13 / 2026-11-13-02","lessonDate":"2026-11-13","chapter":"2026-11-13 日課"},{"id":"lesson:2026-11-13:sentences:파일을 받아요.","type":"sentences","text":"파일을 받아요.","meaning":"我接收文件。","source":"原創日課 2026-11-13 / 2026-11-13-02","lessonDate":"2026-11-13","chapter":"2026-11-13 日課"},{"id":"lesson:2026-11-13:words:주소","type":"words","text":"주소","meaning":"地址","source":"原創日課 2026-11-13 / 2026-11-13-03","lessonDate":"2026-11-13","chapter":"2026-11-13 日課"},{"id":"lesson:2026-11-13:sentences:이메일 주소를 확인해요.","type":"sentences","text":"이메일 주소를 확인해요.","meaning":"我核对邮箱地址。","source":"原創日課 2026-11-13 / 2026-11-13-03","lessonDate":"2026-11-13","chapter":"2026-11-13 日課"},{"id":"lesson:2026-11-13:words:이름","type":"words","text":"이름","meaning":"名字；名称","source":"原創日課 2026-11-13 / 2026-11-13-04","lessonDate":"2026-11-13","chapter":"2026-11-13 日課"},{"id":"lesson:2026-11-13:sentences:파일 이름을 확인해요.","type":"sentences","text":"파일 이름을 확인해요.","meaning":"我核对文件名。","source":"原創日課 2026-11-13 / 2026-11-13-04","lessonDate":"2026-11-13","chapter":"2026-11-13 日課"},{"id":"lesson:2026-11-13:words:내용","type":"words","text":"내용","meaning":"内容","source":"原創日課 2026-11-13 / 2026-11-13-05","lessonDate":"2026-11-13","chapter":"2026-11-13 日課"},{"id":"lesson:2026-11-13:sentences:이메일 내용을 다시 확인해요.","type":"sentences","text":"이메일 내용을 다시 확인해요.","meaning":"我再核对一下邮件内容。","source":"原創日課 2026-11-13 / 2026-11-13-05","lessonDate":"2026-11-13","chapter":"2026-11-13 日課"},{"id":"lesson:2026-11-13:words:찾다","type":"words","text":"찾다","meaning":"寻找；查找；找到","source":"原創日課 2026-11-13 / 2026-11-13-06","lessonDate":"2026-11-13","chapter":"2026-11-13 日課"},{"id":"lesson:2026-11-13:sentences:도서관에서 자료를 찾아요.","type":"sentences","text":"도서관에서 자료를 찾아요.","meaning":"我在图书馆查找资料。","source":"原創日課 2026-11-13 / 2026-11-13-06","lessonDate":"2026-11-13","chapter":"2026-11-13 日課"},{"id":"lesson:2026-11-13:words:열다","type":"words","text":"열다","meaning":"打开","source":"原創日課 2026-11-13 / 2026-11-13-07","lessonDate":"2026-11-13","chapter":"2026-11-13 日課"},{"id":"lesson:2026-11-13:sentences:파일을 열어요.","type":"sentences","text":"파일을 열어요.","meaning":"我打开文件。","source":"原創日課 2026-11-13 / 2026-11-13-07","lessonDate":"2026-11-13","chapter":"2026-11-13 日課"},{"id":"lesson:2026-11-13:words:기다리다","type":"words","text":"기다리다","meaning":"等；等待","source":"原創日課 2026-11-13 / 2026-11-13-08","lessonDate":"2026-11-13","chapter":"2026-11-13 日課"},{"id":"lesson:2026-11-13:sentences:도서관에서 친구를 기다려요.","type":"sentences","text":"도서관에서 친구를 기다려요.","meaning":"我在图书馆等朋友。","source":"原創日課 2026-11-13 / 2026-11-13-08","lessonDate":"2026-11-13","chapter":"2026-11-13 日課"},{"id":"lesson:2026-11-13:words:받다","type":"words","text":"받다","meaning":"接收；收到；领取","source":"原創日課 2026-11-13 / 2026-11-13-09","lessonDate":"2026-11-13","chapter":"2026-11-13 日課"},{"id":"lesson:2026-11-13:sentences:이메일을 받아요.","type":"sentences","text":"이메일을 받아요.","meaning":"我接收电子邮件。","source":"原創日課 2026-11-13 / 2026-11-13-09","lessonDate":"2026-11-13","chapter":"2026-11-13 日課"},{"id":"lesson:2026-11-13:words:보내다","type":"words","text":"보내다","meaning":"发送；寄送","source":"原創日課 2026-11-13 / 2026-11-13-10","lessonDate":"2026-11-13","chapter":"2026-11-13 日課"},{"id":"lesson:2026-11-13:sentences:친구에게 파일을 보내요.","type":"sentences","text":"친구에게 파일을 보내요.","meaning":"我把文件发给朋友。","source":"原創日課 2026-11-13 / 2026-11-13-10","lessonDate":"2026-11-13","chapter":"2026-11-13 日課"}]};
 
 (function(){
 'use strict';
-const C=window.HangulCore,D=window.HangulContent,M=window.HangulData,app=document.getElementById('app'),file=document.getElementById('import-file');
-const STORE='hangul-one-step.v2',URL_BASE='https://trevor23090306d.github.io/hangul-one-step-typing/content/';
+const C=window.HangulCore,D=window.HangulContent,M=window.HangulData,K=window.HangulMistakes,app=document.getElementById('app'),file=document.getElementById('import-file');
+const STORE='hangul-one-step.v3',URL_BASE='https://trevor23090306d.github.io/hangul-one-step-typing/content/';
 const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const btn=(t,a='',second=false)=>'<button class="button '+(second?'secondary':'')+'" '+a+'>'+t+'</button>';
 const pct=(a,b)=>b?Math.round(a/b*100)+'%':'—',time=n=>Math.floor(n/60000)+':'+String(Math.floor(n/1000)%60).padStart(2,'0');
 const modes={guide:'新鍵導學',keys:'單組回想',mixed:'已學鍵位混練',words:'詞語練習',sentences:'句子練習'};
 let state=M.state(),blocked=false,issue='',input=window.HangulAndroid||matchMedia('(pointer:coarse)').matches||innerWidth<681?'native':'physical';
-try{let raw=localStorage.getItem(STORE),old=localStorage.getItem('hangul-one-step.v1');if(raw)state=M.validate(JSON.parse(raw),D.groups);else if(old)state=M.migrate(JSON.parse(old),D.groups);const v=localStorage.getItem('hangul-one-step.input.v2');if(['native','physical'].includes(v))input=v;}catch{blocked=true;issue='原有暫存未能讀取，已保留；本次請匯出備份。';}
+try{let raw=localStorage.getItem(STORE)||localStorage.getItem('hangul-one-step.v2'),old=localStorage.getItem('hangul-one-step.v1');if(raw)state=M.validate(JSON.parse(raw),D.groups);else if(old)state=M.migrate(JSON.parse(old),D.groups);const v=localStorage.getItem('hangul-one-step.input.v2');if(['native','physical'].includes(v))input=v;}catch{blocked=true;issue='原有暫存未能讀取，已保留；本次請匯出備份。';}
 if(window.HangulDailyPack)try{M.addPack(state,window.HangulDailyPack);}catch{issue='內建日課包未能讀取。';}
+let rankDays=7,libraryPage=0;
 let route='home',tab='words',chapter='',selection=null,s=null,last=null,pending=null,expect='backup',items=[],imeTimer,toastTimer;
 function save(){if(blocked)return;state.updatedAt=new Date().toISOString();try{localStorage.setItem(STORE,JSON.stringify(state));}catch{issue='暫存空間不足，請匯出完整備份。';}}
 function toast(t){let e=document.getElementById('toast');e.textContent=t;e.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>e.classList.remove('show'),5000);}
 function catalog(){const map=new Map(),all=[...D.words,...D.sentences].map(x=>({...x,id:'base:'+x.id,source:D.source[x.source].label,chapter:'入門詞句',lessonDate:''})).concat(state.packs.flatMap(p=>p.items));for(const x of all){const key=M.itemKey(x),old=map.get(key),ch=x.chapter||x.lessonDate||'其他';if(old){old.chapters=[...new Set([...old.chapters,ch])];old.sources=[...new Set([...old.sources,x.source])];old.meanings=[...new Set([...old.meanings,x.meaning])];old.meaning=old.meanings.join('；');if(x.lessonDate>old.lessonDate)old.lessonDate=x.lessonDate;}else map.set(key,{...x,key,tokens:C.encode(x.text),chapters:[ch],sources:[x.source],meanings:[x.meaning]});}items=[...map.values()];}
 const stats=()=>M.stats(state,input),knownGroups=()=>D.groups.filter(g=>state.guides.includes(g.id)),suggested=()=>D.groups.find(g=>!C.ready(g,stats().groups[g.id]))||D.groups[0];
-function shell(body,title){document.body.classList.toggle('native-mode',input==='native');document.body.classList.toggle('practicing',route==='practice');app.innerHTML='<div class="shell"><aside class="sidebar"><div class="brand"><div class="brand-mark kr">한</div><div><strong>한 걸음</strong><small>韓文・一步一步</small></div></div><nav class="nav" aria-label="主要導覽">'+[['home','練習桌'],['groups','鍵位關卡'],['mixed','已學鍵位混練'],['library','詞句練習'],['progress','練習紀錄']].map(([r,t])=>'<button data-route="'+r+'" class="'+(route===r?'active':'')+'">'+t+'</button>').join('')+'</nav><div class="sidebar-foot"><p>進度保存在這部裝置</p><button class="text-btn" data-action="export">匯出完整備份</button></div></aside><main class="main"><div class="topline">MY KOREAN DESK / 두벌식 · 兩套式</div><header class="page-heading"><h1>'+esc(title)+'</h1></header><div class="input-choice"><span>輸入方式</span><div class="segmented">'+['native','physical'].map(m=>'<button data-mode="'+m+'" class="'+(m===input?'selected':'')+'" aria-pressed="'+(m===input)+'">'+(m==='native'?'手機系統鍵盤':'實體鍵盤')+'</button>').join('')+'</div><small>'+(input==='native'?'請切到韓文兩套式':'請保持英文輸入模式')+'</small></div>'+(issue?'<div class="notice">'+esc(issue)+'</div>':'')+body+'<footer class="footer">先認識位置，再用記憶找回它。 · 靜音練習 · 離線可用</footer></main></div>';}
-function home(){const g=suggested(),seen=state.guides.includes(g.id);shell('<section class="panel section-box"><div class="hero"><div><p class="eyebrow">YOUR NEXT SMALL STEP</p><h2>今天，再熟悉一點。</h2><p>從新鍵開始，再和舊位置一起練。</p><p>已認識 '+state.introduced.length+' / 33 個鍵位組合</p></div><div class="hero-art" aria-hidden="true"><div class="art-circle"></div><div class="art-glyph kr">가</div></div></div><div class="group-actions">'+btn(seen?'繼續回想練習':state.introduced.length?'繼續認識新鍵':'從第一組開始','data-start="'+(seen?'keys':'guide')+'" data-group="'+g.id+'"')+btn('已學鍵位混練','data-route="mixed"',true)+'</div><p class="subtitle">'+g.name+' · '+(input==='native'?'點開始後喚起手機鍵盤，請先切成韓文。':'直接按英文QWERTY實體鍵。')+'</p><label class="duration">每回合 <select id="minutes" aria-label="每回合長度"><option value="3" '+(state.settings.minutes===3?'selected':'')+'>3 分鐘</option><option value="5" '+(state.settings.minutes===5?'selected':'')+'>5 分鐘</option></select></label></section>','今天，從一個鍵開始。');}
-function groups(){const st=stats();shell('<div class="groups-grid">'+D.groups.map(g=>'<section class="panel group-card"><span class="pill">'+(C.ready(g,st.groups[g.id])?'已達建議門檻':state.guides.includes(g.id)?'已完成導學':'認識新鍵')+'</span><h2>'+g.name+'</h2><p>'+g.note+'</p><div class="group-glyphs kr">'+g.keys.map(k=>C.KEYMAP[k]).join(' ')+'</div><div class="group-actions">'+btn('先認識這一組','data-start="guide" data-group="'+g.id+'"')+btn('自由回想挑戰','data-start="keys" data-group="'+g.id+'"',true)+'</div></section>').join('')+'</div><p class="subtitle">單組每鍵至少3題，最近20題首次無提示90%後建議進階；手機與電腦分列。</p>','一步一步，找到每個位置。');}
-function mixed(){if(selection===null)selection=knownGroups().map(g=>g.id);const ids=selection.filter(x=>state.guides.includes(x));shell('<section class="panel section-box"><h2>新鍵和舊鍵，一起找回來。</h2><p>所有鍵都有出題機會，新鍵與弱鍵適度多練。</p><div class="mix-options">'+D.groups.map(g=>'<label><input type="checkbox" data-mix="'+g.id+'" '+(ids.includes(g.id)?'checked':'')+' '+(!state.guides.includes(g.id)?'disabled':'')+'> '+g.name+' <span class="kr">'+g.keys.map(k=>C.KEYMAP[k]).join(' ')+'</span></label>').join('')+'</div><p id="mix-count">已選 '+M.mixedKeys(D.groups,ids).length+' 個鍵位組合</p>'+btn('開始混合練習','data-start="mixed" '+(!ids.length?'disabled':''))+'<p class="subtitle">重疊鍵去重，普通與Shift分開。混練更新每鍵表現，不代替單組通關。</p></section>','已學鍵位混練');}
-function library(){catalog();const list=items.filter(x=>x.type===tab&&(!chapter||x.chapters.includes(chapter))),chs=[...new Set(items.flatMap(x=>x.chapters))].sort();shell('<div class="library-toolbar"><div class="segmented">'+['words','sentences'].map(t=>'<button data-tab="'+t+'" class="'+(tab===t?'selected':'')+'">'+(t==='words'?'詞語':'句子')+'・'+items.filter(x=>x.type===t).length+'</button>').join('')+'</div><select id="chapter" aria-label="日課或章節"><option value="">全部內容</option>'+chs.map(x=>'<option value="'+esc(x)+'" '+(x===chapter?'selected':'')+'>'+esc(x)+'</option>').join('')+'</select></div><div class="group-actions">'+btn('練習這些'+(tab==='words'?'詞語':'句子'),'data-start="'+tab+'" '+(!list.length?'disabled':''))+btn('更新題庫','data-action="update"',true)+btn('匯入題庫','data-action="import-pack"',true)+'</div><p class="subtitle">每日10個重點詞，預設7拓展＋3複習。依計劃及教材收詞，不要求另行確認學過。'+state.packs.map(p=>esc(p.title)+' v'+p.revision).join(' · ')+'</p><div class="library-grid">'+list.map(x=>'<article class="panel word-card"><span class="source-pill">'+esc(x.chapters.join('／'))+'</span><h2 class="kr" lang="ko">'+esc(x.text)+'</h2><p>'+esc(x.meaning)+'</p><div class="word-action">'+btn('練這一'+(tab==='words'?'詞':'句'),'data-item="'+esc(x.key)+'"',true)+'</div><details class="source-detail"><summary>內容來源</summary>'+esc(x.sources.join('；'))+'</details></article>').join('')+'</div><p>更新需可用網絡，失敗保留舊庫；教材擴充包僅本地匯入。</p>','讓日課，留在手指記憶裡。');}
+function shell(body,title){document.body.classList.toggle('native-mode',input==='native');document.body.classList.toggle('practicing',route==='practice');app.innerHTML='<div class="shell"><aside class="sidebar"><div class="brand"><div class="brand-mark kr">한</div><div><strong>한 걸음</strong><small>韓文打字</small></div></div><nav class="nav" aria-label="主要導覽">'+[['home','練習桌'],['groups','鍵位練習'],['mixed','字母混練'],['library','詞句練習'],['progress','練習紀錄']].map(([r,t])=>'<button data-route="'+r+'" class="'+(route===r?'active':'')+'">'+t+'</button>').join('')+'</nav><div class="sidebar-foot"><p>保存在這部裝置</p><button class="text-btn" data-action="export">匯出備份</button></div></aside><main class="main"><header class="page-heading"><h1>'+esc(title)+'</h1></header><div class="input-choice"><div class="segmented">'+['native','physical'].map(m=>'<button data-mode="'+m+'" class="'+(m===input?'selected':'')+'" aria-pressed="'+(m===input)+'">'+(m==='native'?'手機系統鍵盤':'實體鍵盤')+'</button>').join('')+'</div><small>'+(input==='native'?'韓文兩套式':'英文輸入模式')+'</small></div>'+(issue?'<div class="notice">'+esc(issue)+'</div>':'')+body+'</main></div>';}
+function home(){const g=suggested(),seen=state.guides.includes(g.id);shell('<section class="panel section-box start-panel"><div class="start-summary"><h2>'+g.name+'</h2><p>已認識 '+state.introduced.length+' / 33 個字母</p></div><div class="group-actions">'+btn(seen?'繼續練習':state.introduced.length?'認識新字母':'從第一組開始','data-start="'+(seen?'keys':'guide')+'" data-group="'+g.id+'"')+btn('字母混練','data-route="mixed"',true)+'</div><label class="duration">每回合 <select id="minutes" aria-label="每回合長度"><option value="3" '+(state.settings.minutes===3?'selected':'')+'>3 分鐘</option><option value="5" '+(state.settings.minutes===5?'selected':'')+'>5 分鐘</option></select></label></section>','開始練習');}
+function groups(){const st=stats();shell('<div class="groups-grid">'+D.groups.map(g=>'<section class="panel group-card"><span class="pill">'+(C.ready(g,st.groups[g.id])?'已達建議門檻':state.guides.includes(g.id)?'已完成導學':'新字母')+'</span><h2>'+g.name+'</h2><div class="group-glyphs kr">'+g.keys.map(k=>C.KEYMAP[k]).join(' ')+'</div><div class="group-actions">'+btn('導學','data-start="guide" data-group="'+g.id+'"')+btn('練習','data-start="keys" data-group="'+g.id+'"',true)+'</div></section>').join('')+'</div><details class="compact-details"><summary>進階建議</summary><p>單組每鍵至少3題，最近20題首次無提示90%後建議進階。可自由選組，手機和電腦分開記錄。</p></details>','鍵位練習');}
+function mixed(){if(selection===null)selection=knownGroups().map(g=>g.id);const ids=selection.filter(x=>state.guides.includes(x));shell('<section class="panel section-box"><div class="mix-options">'+D.groups.map(g=>'<label><input type="checkbox" data-mix="'+g.id+'" '+(ids.includes(g.id)?'checked':'')+' '+(!state.guides.includes(g.id)?'disabled':'')+'> '+g.name+' <span class="kr">'+g.keys.map(k=>C.KEYMAP[k]).join(' ')+'</span></label>').join('')+'</div><p id="mix-count">已選 '+M.mixedKeys(D.groups,ids).length+' 個字母</p>'+btn('開始混合練習','data-start="mixed" '+(!ids.length?'disabled':''))+'<p class="subtle">完成導學的組會自動加入。</p></section>','字母混練');}
+function library(){catalog();const list=items.filter(x=>x.type===tab&&(!chapter||x.chapters.includes(chapter))),chs=[...new Set(items.flatMap(x=>x.chapters))].sort(),pages=Math.max(1,Math.ceil(list.length/12));libraryPage=Math.min(Math.max(0,libraryPage),pages-1);const visible=list.slice(libraryPage*12,libraryPage*12+12);shell('<div class="library-toolbar"><div class="segmented">'+['words','sentences'].map(t=>'<button data-tab="'+t+'" class="'+(tab===t?'selected':'')+'">'+(t==='words'?'詞語':'句子')+' · '+items.filter(x=>x.type===t).length+'</button>').join('')+'</div><select id="chapter" aria-label="日課或章節"><option value="">全部內容</option>'+chs.map(x=>'<option value="'+esc(x)+'" '+(x===chapter?'selected':'')+'>'+esc(x)+'</option>').join('')+'</select></div><div class="group-actions">'+btn('開始練習','data-start="'+tab+'" '+(!list.length?'disabled':''))+btn('更新題庫','data-action="update"',true)+'</div><div class="library-grid">'+visible.map(x=>'<article class="panel word-card"><h2 class="kr" lang="ko">'+esc(x.text)+'</h2><p>'+esc(x.meaning)+'</p><div class="word-action">'+btn('練習','data-item="'+esc(x.key)+'"',true)+'</div></article>').join('')+'</div><div class="library-pager">'+btn('上一頁','data-page="'+(libraryPage-1)+'" '+(!libraryPage?'disabled':''),true)+'<span>'+(libraryPage+1)+' / '+pages+'</span>'+btn('下一頁','data-page="'+(libraryPage+1)+'" '+(libraryPage+1>=pages?'disabled':''),true)+'</div><details class="compact-details"><summary>本頁來源</summary><ul>'+visible.map(x=>'<li><span class="kr">'+esc(x.text)+'</span> · '+esc(x.sources.join('；'))+'</li>').join('')+'</ul></details><details class="compact-details"><summary>題庫管理</summary><p>'+state.packs.map(p=>esc(p.title)+' v'+p.revision).join(' · ')+'</p>'+btn('匯入題庫','data-action="import-pack"',true)+'<p>更新失敗仍可使用舊題庫。教材擴充包在本機匯入。</p></details>','詞句練習');}
+function rankingCard(rows,title,empty){return '<section class="panel section-box rank-card"><h2>'+title+'</h2>'+(rows.length?'<ul class="rank-list" aria-label="字母錯誤次數">'+rows.map(x=>'<li data-rank-key="'+x.key+'"><span class="kr" lang="ko">'+C.KEYMAP[x.key]+'</span><strong>'+x.count+' 次</strong></li>').join('')+'</ul>':'<p class="subtle">'+empty+'</p>')+'</section>';}
 function counts(r){const es=r.events.filter(e=>input==='native'||!e.itemKey);return {n:es.length,clean:es.filter(e=>e.clean).length};}
-function progress(){const rs=state.sessions.filter(r=>r.inputMode===input),st=stats();shell('<div class="metrics"><div class="panel metric"><div class="value">'+rs.length+'</div><div class="label">'+(input==='native'?'手機文字輸入':'電腦逐鍵')+'回合</div></div><div class="panel metric"><div class="value">'+time(rs.reduce((n,r)=>n+r.elapsed,0))+'</div><div class="label">此方式有效時間</div></div><div class="panel metric"><div class="value">'+time(state.sessions.reduce((n,r)=>n+r.elapsed,0))+'</div><div class="label">兩端累積時間</div></div></div><section class="panel section-box"><h2>每個鍵，都有自己的步調。</h2><div class="key-map-grid">'+Object.keys(C.KEYMAP).filter(C.isLetter).map(k=>{const a=st.keys[k];return '<div class="stat-key '+(a?.attempts?(a.firstCorrect/a.attempts>=.9?'good':'needs'):'')+'"><strong class="kr">'+C.KEYMAP[k]+'</strong><small>'+C.label(k)+'</small><small>'+(a?pct(a.firstCorrect,a.attempts)+' · '+a.attempts+'題':'未練習')+'</small></div>';}).join('')+'</div><p>手機詞句記整題表現，不反推實際按鍵／Shift次數；與電腦分列。</p></section><section class="panel section-box spaced"><h2>最近回合</h2><div class="table-wrap"><table><thead><tr><th>時間</th><th>練習</th><th>完成題</th><th>首次無提示</th><th>時間</th></tr></thead><tbody>'+rs.slice(-50).reverse().map(r=>{const c=counts(r);return '<tr><td>'+esc(new Date(r.at).toLocaleString('zh-HK'))+'</td><td>'+modes[r.mode]+'</td><td>'+r.questions+'</td><td>'+pct(c.clean,c.n)+'</td><td>'+time(r.elapsed)+'</td></tr>';}).join('')+'</tbody></table></div></section>'+(state.legacy?'<section class="panel section-box spaced"><h2>舊版歷史紀錄</h2><p>保留 '+state.legacy.sessions.length+' 個舊回合摘要及 '+state.legacy.introduced.length+' 個已認識鍵位。舊版未區分輸入方式，不混入新版計分。</p></section>':'')+'<section class="panel section-box spaced"><h2>保存完整備份</h2><p>包含成績及已安裝題庫；新版回合合併去重，不直接覆蓋。</p><div class="group-actions">'+btn('匯出完整備份','data-action="export"')+btn('匯入完整備份','data-action="import-backup"',true)+'</div></section>','看見那些，慢慢熟悉的鍵。');}
+function progress(){const rs=state.sessions.filter(r=>r.inputMode===input),rows=M.mistakeRanking(state.sessions,{inputMode:input,days:rankDays});shell('<div class="record-tools segmented" aria-label="排行時間範圍"><button data-rank-days="7" class="'+(rankDays===7?'selected':'')+'" aria-pressed="'+(rankDays===7)+'">近七天</button><button data-rank-days="all" class="'+(rankDays===null?'selected':'')+'" aria-pressed="'+(rankDays===null)+'">全部</button></div>'+rankingCard(rows,'錯字排行','還沒有字母錯誤紀錄。')+'<details class="compact-details"><summary>統計說明</summary><p>每次可辨識的錯輸，記在本來應輸入的字母。提示和退格不計，正常組字不重複計。手機依輸入變化記次，不能直接讀取系統鍵盤的觸控。</p><p>手機與電腦分開記錄。新明細從2.1.0開始，舊回合保留為歷史摘要。</p></details><details class="compact-details"><summary>最近回合</summary><div class="table-wrap"><table><thead><tr><th>時間</th><th>練習</th><th>完成題</th><th>用時</th></tr></thead><tbody>'+rs.slice(-30).reverse().map(r=>'<tr><td>'+esc(new Date(r.at).toLocaleString('zh-HK'))+'</td><td>'+modes[r.mode]+'</td><td>'+r.questions+'</td><td>'+time(r.elapsed)+'</td></tr>').join('')+'</tbody></table></div><p>舊版摘要：'+rs.filter(r=>r.mistakes===null).length+' 回合'+(state.legacy?'，另保留 '+state.legacy.sessions.length+' 個v1回合':'')+'。</p></details><details class="compact-details"><summary>備份與還原</summary><div class="group-actions">'+btn('匯出完整備份','data-action="export"')+btn('匯入完整備份','data-action="import-backup"',true)+'</div><p>完整備份包含紀錄與題庫；新版備份請用2.1.0或之後版本匯入。</p></details>','練習紀錄');}
 function render(){if(s&&route==='practice')practice();else if(route==='groups')groups();else if(route==='mixed')mixed();else if(route==='library')library();else if(route==='progress')progress();else if(route==='result')result();else home();}
 const keyMode=()=>['guide','keys','mixed'].includes(s.mode),target=()=>keyMode()?C.KEYMAP[s.tokens[0]]:s.item.text;
 function focus(){if(s&&input==='native'&&!s.paused){document.getElementById('answer')?.focus({preventScroll:true});window.HangulAndroid?.showKeyboard?.();}}
@@ -343,7 +627,7 @@ function bindAnswer(el,previous=''){
  el.dataset.bound='true';el.dataset.question=String(s.question);
  el.addEventListener('compositionstart',()=>{if(!live())return;started=true;oldCommit=false;s.composing=true;clearTimeout(imeTimer);});
  el.addEventListener('compositionend',e=>{if(!live())return;if(!started){if(previous&&e.data===previous){oldCommit=true;if(el.value.normalize('NFC')===previous)el.value='';}return;}started=false;s.composing=false;nativeInput();});
- el.addEventListener('input',e=>{if(!live())return;if(oldCommit&&previous&&e.data===previous&&el.value.normalize('NFC')===previous){oldCommit=false;el.value='';return;}oldCommit=false;nativeInput();});
+ el.addEventListener('input',e=>{if(!live())return;if(oldCommit&&previous&&e.data===previous&&el.value.normalize('NFC')===previous){oldCommit=false;el.value='';return;}oldCommit=false;nativeInput(e);});
  el.addEventListener('paste',e=>{e.preventDefault();toast('請自行輸入，練習鍵位記憶。');});
  el.addEventListener('keydown',e=>{if(!live())return;oldCommit=false;if(e.key==='Enter'&&!e.isComposing){e.preventDefault();if(el.value.normalize('NFC')===target())nativeDone();}});
 }
@@ -355,29 +639,30 @@ function freshAnswer(){
  }else{el.value='';if(!el.dataset.bound)bindAnswer(el);}
  s.composing=false;return el;
 }
-function practice(){shell('<section class="panel practice-card" id="practice-card"><div class="card-top"><span class="pill" id="step-name"></span><span class="timer" id="timer"></span></div><div class="target-zone"><p class="question-label" id="question-label"></p><div class="kr" lang="ko" id="target-text"></div><p class="meaning" id="meaning"></p>'+(input==='native'?'<label class="native-label" for="answer">用手機韓文鍵盤輸入</label><input id="answer" class="native-answer kr" lang="ko" type="text" inputmode="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="next" aria-label="輸入韓文答案"><p class="composition-note">組字時字形會變動；請自行輸入，避免整詞候選、語音代答。</p>':'<div class="typing-preview kr" id="preview" aria-label="已輸入韓文"></div>')+'<div id="hint-area"></div><p id="feedback" class="feedback" role="status"></p></div><div class="practice-actions"><div class="action-left">'+btn('提示','data-action="hint"',true)+btn('暫停','data-action="pause"',true)+'</div><button class="text-btn" data-action="finish">結束並看結果</button></div><div id="pause-area"></div></section>','讓手指，記住這個位置。');paint(true);focus();}
+function practice(){shell('<section class="panel practice-card" id="practice-card"><div class="card-top"><span class="pill" id="step-name"></span><span class="timer" id="timer"></span></div><div class="target-zone"><p class="question-label" id="question-label"></p><div class="kr" lang="ko" id="target-text"></div><p class="meaning" id="meaning"></p>'+(input==='native'?'<label class="native-label" for="answer">用手機韓文鍵盤輸入</label><input id="answer" class="native-answer kr" lang="ko" type="text" inputmode="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="next" aria-label="輸入韓文答案"><p class="composition-note">組字時字形會變動；請自行輸入，避免整詞候選、語音代答。</p>':'<div class="typing-preview kr" id="preview" aria-label="已輸入韓文"></div>')+'<div id="hint-area"></div><p id="feedback" class="feedback" role="status"></p></div><div class="practice-actions"><div class="action-left">'+btn('提示','data-action="hint"',true)+btn('暫停','data-action="pause"',true)+'</div><button class="text-btn" data-action="finish">結束並看結果</button></div><div id="pause-area"></div></section>','練習中');paint(true);focus();}
 function paint(fresh=false){if(!s)return;document.getElementById('step-name').textContent=modes[s.mode];document.getElementById('question-label').textContent=s.mode==='guide'?'先看看位置，跟著輸入。':keyMode()?'這個字母，在哪個位置？':'照著目標輸入完整詞句。';const t=document.getElementById('target-text');t.textContent=target();t.className='kr '+(keyMode()?'target-glyph':'target-word');document.getElementById('meaning').textContent=s.item?.meaning||'';const k=s.tokens[Math.min(s.cursor,s.tokens.length-1)];document.getElementById('hint-area').innerHTML=s.mode==='guide'||s.hinted?'<p class="mapping"><span class="kr">'+esc(C.KEYMAP[k])+'</span> → <kbd>'+esc(C.label(k))+'</kbd></p><p class="subtitle">'+s.tokens.map(k=>esc(C.KEYMAP[k])).join(' · ')+'</p>':'';const f=document.getElementById('feedback');f.textContent=s.feedback||'';f.classList.toggle('error',!!s.errorFeedback);const p=document.getElementById('preview');if(p)p.textContent=keyMode()?'':C.compose(s.tokens.slice(0,s.cursor));const a=fresh?freshAnswer():document.getElementById('answer');if(a){a.disabled=s.paused;a.setAttribute('aria-busy',String(s.transitioning));}document.getElementById('pause-area').innerHTML=s.paused?'<div class="pause-layer"><h2>休息一下，沒關係。</h2><p>計時已暫停。</p>'+btn('繼續練習','data-action="resume"')+'<button data-action="finish" class="text-btn">結束這一回合</button></div>':'';tick();}
-function next(){clearTimeout(imeTimer);s.question=(s.question||0)+1;Object.assign(s,{cursor:0,results:[],errors:0,hinted:false,feedback:'',errorFeedback:false,transitioning:false,stepStart:s.elapsed,composing:false});if(s.mode==='guide')s.tokens=[s.queue[s.guideIndex]];else if(['keys','mixed'].includes(s.mode)){const keys=s.mode==='mixed'?s.mixKeys:D.groups.find(g=>g.id===s.groupId).keys,min=Math.min(...keys.map(k=>s.counts[k]||0)),pool=keys.filter(k=>(s.counts[k]||0)<=min+1);const k=C.chooseKey(pool,stats().keys,s.counts,s.previous);s.tokens=[k];s.previous=k;}else{let pool=s.pool.filter(x=>x.key!==s.item?.key);if(!pool.length)pool=s.pool;const st=stats().items,w=pool.map(x=>{const a=st[x.key];return 1+(a?.attempts?4*(1-a.firstCorrect/a.attempts)+a.hinted/a.attempts:3)+(x.lessonDate===s.latest?1:0);});let n=Math.random()*w.reduce((a,b)=>a+b,0),i=0;while(i<pool.length-1&&(n-=w[i])>0)i++;s.item=pool[i];s.tokens=s.item.tokens;}}
-function start(mode,gid,ik){if(s)finish(false);catalog();const g=D.groups.find(g=>g.id===gid)||suggested(),item=items.find(x=>x.key===ik);if(item)mode=item.type;const pool=item?[item]:items.filter(x=>x.type===mode&&(!chapter||x.chapters.includes(chapter))),ids=(selection||knownGroups().map(g=>g.id)).filter(x=>state.guides.includes(x));if(mode==='mixed'&&!ids.length){route='mixed';render();toast('先完成一組導學，再選已學組別。');return;}if(['words','sentences'].includes(mode)&&!pool.length)return;const queue=[];if(mode==='guide')for(let i=0;i<g.keys.length;i+=2)queue.push(...g.keys.slice(i,i+2),...g.keys.slice(i,i+2));s={id:M.id(),at:new Date().toISOString(),inputMode:input,mode,groupId:['guide','keys'].includes(mode)?g.id:null,pool,pinned:ik,queue,guideIndex:0,guidePresses:0,elapsed:0,lastTick:performance.now(),minutes:state.settings.minutes,paused:false,events:[],questions:0,counts:{},mixKeys:M.mixedKeys(D.groups,ids),previous:'',latest:pool.map(x=>x.lessonDate).sort().at(-1)||''};next();route='practice';practice();}
-function persist(){if(!s||(!s.events.length&&!s.guidePresses))return;const r={id:s.id,at:s.at,inputMode:s.inputMode,mode:s.mode,groupId:s.groupId,elapsed:s.elapsed,questions:s.questions,events:s.events.slice()};state.sessions=state.sessions.filter(x=>x.id!==r.id).concat([r]);save();}
+function next(){clearTimeout(imeTimer);s.question=(s.question||0)+1;Object.assign(s,{cursor:0,results:[],errors:0,hinted:false,feedback:'',errorFeedback:false,transitioning:false,nativePrevious:'',stepStart:s.elapsed,composing:false});if(s.mode==='guide')s.tokens=[s.queue[s.guideIndex]];else if(['keys','mixed'].includes(s.mode)){const keys=s.mode==='mixed'?s.mixKeys:D.groups.find(g=>g.id===s.groupId).keys,min=Math.min(...keys.map(k=>s.counts[k]||0)),pool=keys.filter(k=>(s.counts[k]||0)<=min+1);const k=C.chooseKey(pool,stats().keys,s.counts,s.previous);s.tokens=[k];s.previous=k;}else{let pool=s.pool.filter(x=>x.key!==s.item?.key);if(!pool.length)pool=s.pool;const st=stats().items,w=pool.map(x=>{const a=st[x.key];return 1+(a?.attempts?4*(1-a.firstCorrect/a.attempts)+a.hinted/a.attempts:3)+(x.lessonDate===s.latest?1:0);});let n=Math.random()*w.reduce((a,b)=>a+b,0),i=0;while(i<pool.length-1&&(n-=w[i])>0)i++;s.item=pool[i];s.tokens=s.item.tokens;}}
+function start(mode,gid,ik){if(s)finish(false);catalog();const g=D.groups.find(g=>g.id===gid)||suggested(),item=items.find(x=>x.key===ik);if(item)mode=item.type;const pool=item?[item]:items.filter(x=>x.type===mode&&(!chapter||x.chapters.includes(chapter))),ids=(selection||knownGroups().map(g=>g.id)).filter(x=>state.guides.includes(x));if(mode==='mixed'&&!ids.length){route='mixed';render();toast('先完成一組導學，再選已學組別。');return;}if(['words','sentences'].includes(mode)&&!pool.length)return;const queue=[];if(mode==='guide')for(let i=0;i<g.keys.length;i+=2)queue.push(...g.keys.slice(i,i+2),...g.keys.slice(i,i+2));s={id:M.id(),at:new Date().toISOString(),inputMode:input,mode,mistakes:[],groupId:['guide','keys'].includes(mode)?g.id:null,pool,pinned:ik,queue,guideIndex:0,guidePresses:0,elapsed:0,lastTick:performance.now(),minutes:state.settings.minutes,paused:false,events:[],questions:0,counts:{},mixKeys:M.mixedKeys(D.groups,ids),previous:'',latest:pool.map(x=>x.lessonDate).sort().at(-1)||''};next();route='practice';practice();}
+function persist(){if(!s||(!s.events.length&&!s.guidePresses&&!s.mistakes.length))return;const r={id:s.id,at:s.at,inputMode:s.inputMode,mode:s.mode,groupId:s.groupId,elapsed:s.elapsed,questions:s.questions,events:s.events.slice(),mistakes:s.mistakes.slice()};state.sessions=state.sessions.filter(x=>x.id!==r.id).concat([r]);save();}
 function guideDone(){s.guidePresses++;state.introduced=[...new Set([...state.introduced,s.tokens[0]])];s.guideIndex++;save();if(s.guideIndex===s.queue.length){state.guides=[...new Set([...state.guides,s.groupId])];selection=null;persist();const g=s.groupId;s=null;start('keys',g);toast('導學完成，這組已加入混練。');return;}next();paint(true);focus();}
+function addMistakes(rows){if(!s||s.mode==='guide')return;let added=0;for(const row of rows){if(!C.isLetter(row.key))continue;s.mistakes.push({id:M.id(),at:new Date().toISOString(),question:s.question,key:row.key,actual:C.isLetter(row.actual)?row.actual:null});added++;}if(added)persist();}
 function record(e){s.events.push(e);if(e.key){s.counts[e.key]=(s.counts[e.key]||0)+1;state.introduced=[...new Set([...state.introduced,e.key])];}}
 function done(){s.questions++;s.transitioning=true;persist();if(s.expired){finish();return;}if(keyMode()){next();paint(true);focus();return;}s.feedback='答對了！';paint();const active=s,q=s.question,go=()=>{if(s!==active||s.question!==q)return;if(s.paused){setTimeout(go,200);return;}next();paint(true);focus();};setTimeout(go,1000);}
-function nativeInput(){if(!s||s.paused||s.transitioning)return;tick();clearTimeout(imeTimer);const el=document.getElementById('answer'),status=M.textStatus(el.value,target(),s.composing);if(status==='complete'&&keyMode()){nativeDone();return;}s.errorFeedback=status==='error';if(status==='error'){s.errors=Math.max(s.errors,1);s.feedback='這裡還沒對上，請退格修改。';}else s.feedback=status==='complete'?'已輸入完整答案。':s.composing?'正在組字…':'';paint();if(status==='complete'){const active=s,q=s.question,t=target();imeTimer=setTimeout(()=>{if(s===active&&s.question===q&&!s.paused&&!s.transitioning&&document.getElementById('answer')===el&&el.value.normalize('NFC')===t)nativeDone();},s.composing?850:400);}}
+function nativeInput(event){if(!s||s.paused||s.transitioning)return;tick();clearTimeout(imeTimer);const el=document.getElementById('answer'),changes=K.nativeChanges(s.nativePrevious||'',el.value,target(),{inputType:event?.inputType||'',single:keyMode()});s.nativePrevious=el.value;if(changes.length){s.errors+=changes.length;addMistakes(changes);}const status=M.textStatus(el.value,target(),s.composing);if(status==='complete'&&keyMode()){nativeDone();return;}s.errorFeedback=status==='error';if(status==='error'){s.errors=Math.max(s.errors,1);s.feedback='這裡還沒對上，請退格修改。';}else s.feedback=status==='complete'?'已輸入完整答案。':s.composing?'正在組字…':'';paint();if(status==='complete'){const active=s,q=s.question,t=target();imeTimer=setTimeout(()=>{if(s===active&&s.question===q&&!s.paused&&!s.transitioning&&document.getElementById('answer')===el&&el.value.normalize('NFC')===t)nativeDone();},s.composing?850:400);}}
 function nativeDone(){if(!s||s.paused||s.transitioning)return;clearTimeout(imeTimer);tick();if(s.mode==='guide'){guideDone();return;}record({key:keyMode()?s.tokens[0]:null,itemKey:s.item?.key||'',clean:!s.hinted&&!s.errors,hinted:s.hinted,errors:s.errors,ms:s.elapsed-s.stepStart});done();}
-function physical(token){if(!s||s.paused||s.transitioning||input!=='physical')return;tick();if(token!==s.tokens[s.cursor]){s.errors++;s.feedback='這個位置還沒對上，再試一次。';s.errorFeedback=true;paint();return;}if(s.mode==='guide'){guideDone();return;}const prior=s.results[s.cursor],k=s.tokens[s.cursor];s.results[s.cursor]={key:C.isLetter(k)?k:null,itemKey:'',clean:!s.hinted&&!s.errors&&(!prior||prior.clean),hinted:s.hinted||!!prior?.hinted,errors:s.errors+(prior?.errors||0),ms:prior?.ms??s.elapsed-s.stepStart};s.cursor++;s.errors=0;s.hinted=false;s.stepStart=s.elapsed;s.feedback='';s.errorFeedback=false;if(s.cursor===s.tokens.length){for(const e of s.results)if(e.key)record(e);if(s.item)record({key:null,itemKey:s.item.key,clean:s.results.every(e=>e.clean),hinted:s.results.some(e=>e.hinted),errors:s.results.reduce((n,e)=>n+e.errors,0),ms:s.results.reduce((n,e)=>n+(e.ms||0),0)});done();}else paint();}
+function physical(token){if(!s||s.paused||s.transitioning||input!=='physical')return;tick();if(token!==s.tokens[s.cursor]){addMistakes([{key:s.tokens[s.cursor],actual:C.isLetter(token)?token:null}]);s.errors++;s.feedback='這個位置還沒對上，再試一次。';s.errorFeedback=true;paint();return;}if(s.mode==='guide'){guideDone();return;}const prior=s.results[s.cursor],k=s.tokens[s.cursor];s.results[s.cursor]={key:C.isLetter(k)?k:null,itemKey:'',clean:!s.hinted&&!s.errors&&(!prior||prior.clean),hinted:s.hinted||!!prior?.hinted,errors:s.errors+(prior?.errors||0),ms:prior?.ms??s.elapsed-s.stepStart};s.cursor++;s.errors=0;s.hinted=false;s.stepStart=s.elapsed;s.feedback='';s.errorFeedback=false;if(s.cursor===s.tokens.length){for(const e of s.results)if(e.key)record(e);if(s.item)record({key:null,itemKey:s.item.key,clean:s.results.every(e=>e.clean),hinted:s.results.some(e=>e.hinted),errors:s.results.reduce((n,e)=>n+e.errors,0),ms:s.results.reduce((n,e)=>n+(e.ms||0),0)});done();}else paint();}
 function tick(){if(!s)return;const now=performance.now();if(!s.paused&&s.mode!=='guide')s.elapsed=Math.min(s.minutes*60000,s.elapsed+Math.max(0,now-s.lastTick));s.lastTick=now;s.expired=s.mode!=='guide'&&s.elapsed>=s.minutes*60000;const el=document.getElementById('timer');if(el)el.textContent=s.mode==='guide'?'跟著輸入・不計時':time(s.elapsed)+' / '+s.minutes+':00'+(s.expired?' · 完成當題後結算':'');}
 function pause(){if(!s||s.paused)return;tick();s.paused=true;clearTimeout(imeTimer);paint();document.getElementById('answer')?.blur();window.HangulAndroid?.hideKeyboard?.();}
 function resume(){if(!s)return;s.paused=false;s.lastTick=performance.now();paint();focus();if(input==='native'&&document.getElementById('answer').value)nativeInput();}
 function finish(show=true){if(!s)return;tick();clearTimeout(imeTimer);if(!s.transitioning&&s.mode!=='guide'&&(s.errors||s.hinted||s.cursor>0||(input==='native'&&document.getElementById('answer')?.value))){if(input==='physical'){for(const e of s.results.slice(0,s.cursor))if(e?.key)record(e);}const k=keyMode()?s.tokens[0]:null;record({key:k,itemKey:s.item?.key||'',clean:false,hinted:s.hinted,errors:s.errors,ms:null});}persist();last={...s,events:s.events.slice()};s=null;window.HangulAndroid?.hideKeyboard?.();if(show){route='result';render();}}
-function result(){if(!last){route='home';home();return;}const c=counts(last);shell('<section class="panel section-box result-hero"><h2>這一小步，已經留下來了。</h2><p>'+modes[last.mode]+' · '+(last.inputMode==='native'?'手機文字輸入':'電腦實體鍵盤')+'</p><div class="result-values"><div><strong>'+last.questions+'</strong><span>完成題目</span></div><div><strong>'+pct(c.clean,c.n)+'</strong><span>首次無提示完成</span></div><div><strong>'+time(last.elapsed)+'</strong><span>有效時間</span></div></div><p>提示／錯誤後完成分開記錄，未完成題目不冒算答對。</p><div class="result-actions">'+btn('再練一小回合','data-action="again"')+btn('已學鍵位混練','data-route="mixed"',true)+btn('匯出完整備份','data-action="export"',true)+'</div></section>','每一次練習，都算數。');}
+function result(){if(!last){route='home';home();return;}shell('<p class="subtle">'+modes[last.mode]+' · '+last.questions+' 題 · '+time(last.elapsed)+'</p>'+rankingCard(M.mistakeRanking([last],{limit:10}),'本回合錯字','本回合沒有字母錯誤。')+'<div class="result-actions">'+btn('再練一回合','data-action="again"')+btn('查看紀錄','data-route="progress"',true)+btn('回練習桌','data-route="home"',true)+'</div>','練習完成');}
 function exportBackup(){if(s)finish();save();const text=M.backup(state),name='韓文完整備份_'+new Date().toISOString().replace(/[:.]/g,'-')+'.json';if(window.HangulAndroid){window.HangulAndroid.exportJson(name,text);return;}const url=URL.createObjectURL(new Blob([text],{type:'application/json;charset=utf-8'})),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),2000);toast('已準備下載完整備份，請保留JSON檔。');}
 function openFile(kind){if(s)pause();expect=kind;if(window.HangulAndroid)window.HangulAndroid.importJson();else file.click();}
 function receive(text){try{const p=M.parse(text,D.groups);if((expect==='pack')!==(p.kind==='pack'))throw Error(expect==='pack'?'這是成績備份，請用「匯入完整備份」。':'這是題庫包，請用「匯入題庫」。');let copy=JSON.parse(JSON.stringify(state)),desc;if(p.kind==='pack'){const info=M.addPack(copy,p.value);desc=esc(p.value.title)+'：'+p.value.items.length+'項，'+(info.skipped?'已安裝此版本。':'驗證通過，將加入題庫。');}else{const info=M.merge(copy,p.value,D.groups);copy=info.state;desc='新增 '+info.added+' 個回合，排除 '+info.duplicates+' 個重複回合，題庫一併恢復。'+(p.kind==='legacy'?'舊版作歷史基準保留。':'');}pending=copy;const el=document.createElement('div');el.className='modal-backdrop';el.innerHTML='<section class="modal" role="dialog" aria-modal="true" aria-labelledby="import-title"><h2 id="import-title">匯入前確認</h2><p>'+desc+'</p><div class="actions">'+btn('取消','data-action="cancel-import"',true)+btn('確認匯入','data-action="confirm-import"')+'</div></section>';app.appendChild(el);el.querySelector('button').focus();}catch(e){toast(e.message);}}
 async function update(){if(s)pause();toast('正在取得最新日課題庫…');const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),20000);try{const res=await fetch(URL_BASE+'latest.json',{signal:controller.signal,cache:'no-store'});if(!res.ok)throw Error();const index=await res.json();if(index.kind!=='hangul-content-index'||index.version!==1||!Array.isArray(index.packs)||index.packs.length>20)throw Error();const copy=JSON.parse(JSON.stringify(state));let count=0;for(const e of index.packs){if(!/^[a-z0-9_-]+\.json$/.test(e.url)||!/^[a-f0-9]{64}$/.test(e.sha256))throw Error();const response=await fetch(URL_BASE+e.url,{signal:controller.signal,cache:'no-store'});if(!response.ok)throw Error();const bytes=await response.arrayBuffer();if(bytes.byteLength>5e6)throw Error();const hash=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',bytes))).map(x=>x.toString(16).padStart(2,'0')).join('');if(hash!==e.sha256)throw Error();const p=M.pack(JSON.parse(new TextDecoder().decode(bytes)));if(p.packId!==e.packId||p.revision!==e.revision)throw Error();if(!M.addPack(copy,p).skipped)count++;}state=copy;save();catalog();route='library';render();toast(count?'題庫已更新，原有成績保留。':'已是最新題庫。');}catch{toast('暫時無法更新，原題庫與成績保留；可重試或匯入離線題庫包。');}finally{clearTimeout(timer);}}
 window.HangulFiles={receiveBase64:x=>receive(new TextDecoder().decode(Uint8Array.from(atob(x),c=>c.charCodeAt(0)))),notice:toast,pause};
-document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b||b.disabled)return;if(b.dataset.route){if(s)finish(false);route=b.dataset.route;render();return;}if(b.dataset.mode){if(s)finish(false);input=b.dataset.mode;try{localStorage.setItem('hangul-one-step.input.v2',input);}catch{}render();return;}if(b.dataset.start){start(b.dataset.start,b.dataset.group);return;}if(b.dataset.item){start(null,null,b.dataset.item);return;}if(b.dataset.tab){tab=b.dataset.tab;render();return;}const a=b.dataset.action;if(a==='hint'&&s&&!s.paused&&!s.transitioning){s.hinted=true;s.feedback='對照已顯示，下次再自己回想。';paint();focus();}else if(a==='pause')pause();else if(a==='resume')resume();else if(a==='finish')finish();else if(a==='again'&&last)start(last.mode,last.groupId,last.pinned);else if(a==='export')exportBackup();else if(a==='import-pack')openFile('pack');else if(a==='import-backup')openFile('backup');else if(a==='update')update();else if(a==='cancel-import'){pending=null;b.closest('.modal-backdrop').remove();}else if(a==='confirm-import'&&pending){state=pending;pending=null;blocked=false;save();catalog();route='progress';render();toast('匯入完成，新版回合已合併去重。');}});
-document.addEventListener('change',e=>{if(e.target.id==='minutes'){state.settings.minutes=+e.target.value;save();}else if(e.target.id==='chapter'){chapter=e.target.value;render();}else if(e.target.dataset.mix){const id=e.target.dataset.mix;selection=e.target.checked?[...new Set([...(selection||[]),id])]:selection.filter(x=>x!==id);document.getElementById('mix-count').textContent='已選 '+M.mixedKeys(D.groups,selection).length+' 個鍵位組合';app.querySelector('[data-start="mixed"]').disabled=!selection.length;}});
+document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b||b.disabled)return;if(b.dataset.route){if(s)finish(false);route=b.dataset.route;render();return;}if(b.dataset.mode){if(s)finish(false);input=b.dataset.mode;try{localStorage.setItem('hangul-one-step.input.v2',input);}catch{}render();return;}if(b.dataset.start){start(b.dataset.start,b.dataset.group);return;}if(b.dataset.item){start(null,null,b.dataset.item);return;}if(b.dataset.tab){tab=b.dataset.tab;libraryPage=0;render();return;}if(b.dataset.page!==undefined){libraryPage=Number(b.dataset.page)||0;render();return;}if(b.dataset.rankDays){rankDays=b.dataset.rankDays==='all'?null:7;render();return;}const a=b.dataset.action;if(a==='hint'&&s&&!s.paused&&!s.transitioning){s.hinted=true;s.feedback='對照已顯示，下次再自己回想。';paint();focus();}else if(a==='pause')pause();else if(a==='resume')resume();else if(a==='finish')finish();else if(a==='again'&&last)start(last.mode,last.groupId,last.pinned);else if(a==='export')exportBackup();else if(a==='import-pack')openFile('pack');else if(a==='import-backup')openFile('backup');else if(a==='update')update();else if(a==='cancel-import'){pending=null;b.closest('.modal-backdrop').remove();}else if(a==='confirm-import'&&pending){state=pending;pending=null;blocked=false;save();catalog();route='progress';render();toast('匯入完成，新版回合已合併去重。');}});
+document.addEventListener('change',e=>{if(e.target.id==='minutes'){state.settings.minutes=+e.target.value;save();}else if(e.target.id==='chapter'){chapter=e.target.value;libraryPage=0;render();}else if(e.target.dataset.mix){const id=e.target.dataset.mix;selection=e.target.checked?[...new Set([...(selection||[]),id])]:selection.filter(x=>x!==id);document.getElementById('mix-count').textContent='已選 '+M.mixedKeys(D.groups,selection).length+' 個字母';app.querySelector('[data-start="mixed"]').disabled=!selection.length;}});
 file.addEventListener('change',async()=>{const f=file.files[0];file.value='';if(!f)return;if(f.size>25*1024*1024){toast('檔案超過25MB，原資料保留。');return;}receive(await f.text());});
 document.addEventListener('keydown',e=>{if(pending){if(e.key==='Escape'){pending=null;document.querySelector('.modal-backdrop')?.remove();}return;}if(!s)return;if(e.key==='Escape'){e.preventDefault();s.paused?resume():pause();return;}if(input!=='physical'||s.paused||s.transitioning||e.target.matches('input,textarea,select'))return;if(e.code==='Backspace'){e.preventDefault();if(s.cursor>0){s.cursor--;s.errors=0;s.hinted=false;paint();}return;}const token=C.eventToken(e);if(token!==null){e.preventDefault();physical(token);}});
 document.addEventListener('visibilitychange',()=>{if(document.hidden)pause();});window.addEventListener('beforeunload',()=>{if(s){tick();persist();}});setInterval(tick,250);catalog();render();save();
